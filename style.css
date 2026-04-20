@@ -1,0 +1,116 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  background: #0f1117;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+header {
+  background: #1a1d27;
+  border-bottom: 2px solid #2a2d3e;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.tagline {
+  color: #8b8fa8;
+  margin-top: 0.4rem;
+  font-size: 1rem;
+}
+
+main {
+  flex: 1;
+  padding: 3rem 1.5rem;
+}
+
+main h2 {
+  font-size: 1.3rem;
+  color: #a0a4bb;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.site-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.site-card {
+  display: block;
+  background: #1a1d27;
+  border: 1px solid #2a2d3e;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+  text-align: center;
+}
+
+.site-card:hover {
+  border-color: #5b6abf;
+  transform: translateY(-3px);
+}
+
+.site-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.site-card h3 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.site-card p {
+  font-size: 0.85rem;
+  color: #8b8fa8;
+  line-height: 1.5;
+}
+
+footer {
+  background: #1a1d27;
+  border-top: 1px solid #2a2d3e;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-nav {
+  margin-bottom: 0.75rem;
+}
+
+.footer-nav a {
+  color: #8b8fa8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin: 0 0.75rem;
+}
+
+.footer-nav a:hover { color: #c0c4d8; }
+
+.copyright {
+  font-size: 0.8rem;
+  color: #5a5d70;
+}
