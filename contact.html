@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ - GameGuide JP</title>
+  <meta name="description" content="GameGuide JP へのお問い合わせフォームです。">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .prose { max-width: 640px; margin: 0 auto; }
+    .back-link { display: inline-block; margin-bottom: 2rem; color: #8b8fa8; text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { color: #c0c4d8; }
+    .prose h1 { font-size: 1.6rem; color: #fff; margin-bottom: 0.5rem; }
+    .prose .lead { font-size: 0.95rem; color: #b0b4c8; margin-bottom: 2rem; line-height: 1.7; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      color: #c0c4d8;
+      margin-bottom: 0.4rem;
+    }
+    .form-group label .required { color: #e06c75; margin-left: 0.25rem; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      background: #1a1d27;
+      border: 1px solid #2a2d3e;
+      border-radius: 6px;
+      color: #e0e0e0;
+      font-size: 0.95rem;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #5b6abf;
+    }
+    .form-group textarea { min-height: 160px; resize: vertical; }
+    .hp-field { position: absolute; left: -9999px; }
+    .submit-btn {
+      background: #5b6abf;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+    }
+    .submit-btn:hover { background: #6b7acc; }
+    .submit-btn:disabled { background: #3a3d50; cursor: not-allowed; }
+    .status-msg { margin-top: 1rem; padding: 0.75rem 1rem; border-radius: 6px; font-size: 0.9rem; display: none; }
+    .status-msg.success { display: block; background: rgba(106, 176, 76, 0.15); color: #8fc67a; border: 1px solid rgba(106, 176, 76, 0.3); }
+    .status-msg.error { display: block; background: rgba(224, 108, 117, 0.15); color: #e28890; border: 1px solid rgba(224, 108, 117, 0.3); }
+    .note { font-size: 0.85rem; color: #8b8fa8; margin-top: 1.5rem; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>GameGuide JP</h1>
+      <p class="tagline">日本語ゲーム攻略まとめ</p>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 3rem 1.5rem;">
+    <div class="prose">
+      <a class="back-link" href="/">← トップへ戻る</a>
+      <h1>お問い合わせ</h1>
+      <p class="lead">誤情報のご指摘・情報提供・その他のお問い合わせはこちらのフォームからお送りください。通常1週間以内に返信いたします。</p>
+
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="93ac96ab-f6df-4b2e-b35b-33bd1b74d8ff">
+        <input type="hidden" name="subject" value="[GameGuide JP] お問い合わせ">
+        <input type="hidden" name="from_name" value="GameGuide JP Contact">
+        <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off">
+
+        <div class="form-group">
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" placeholder="（任意）">
+        </div>
+
+        <div class="form-group">
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" placeholder="（任意・返信希望の場合はご記入ください）">
+        </div>
+
+        <div class="form-group">
+          <label for="site">対象サイト</label>
+          <select id="site" name="site">
+            <option value="未指定">選択してください</option>
+            <option value="Windrose">Windrose</option>
+            <option value="Dragonkin: The Banished">Dragonkin: The Banished</option>
+            <option value="Everwind">Everwind</option>
+            <option value="GameGuide JP トップ">GameGuide JP トップ</option>
+            <option value="その他">その他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">お問い合わせ内容<span class="required">*</span></label>
+          <textarea id="message" name="message" required placeholder="誤情報のご指摘・情報提供・ご要望などをお書きください。"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">送信する</button>
+
+        <div class="status-msg" id="status-msg"></div>
+      </form>
+
+      <p class="note">
+        ※ このフォームは <a href="https://web3forms.com/" target="_blank" rel="noopener" style="color:#7b8fd4;">Web3Forms</a> を使用しています。<br>
+        ※ 個別のゲームに関する技術的な質問には GitHub Issues もご利用ください。
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-nav">
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/about.html">運営者情報</a>
+        <a href="/contact.html">お問い合わせ</a>
+      </nav>
+      <p class="copyright">&copy; 2025 GameGuide JP</p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const btn = document.getElementById('submit-btn');
+    const statusEl = document.getElementById('status-msg');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.textContent = '送信中...';
+      statusEl.className = 'status-msg';
+      statusEl.textContent = '';
+
+      const formData = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        const json = await res.json();
+        if (res.ok && json.success) {
+          statusEl.className = 'status-msg success';
+          statusEl.textContent = '送信しました。お問い合わせありがとうございます。';
+          form.reset();
+        } else {
+          throw new Error(json.message || '送信に失敗しました');
+        }
+      } catch (err) {
+        statusEl.className = 'status-msg error';
+        statusEl.textContent = '送信に失敗しました: ' + err.message;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = '送信する';
+      }
+    });
+  </script>
+</body>
+</html>
