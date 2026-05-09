@@ -167,6 +167,173 @@ body {
   letter-spacing: 0.05em;
 }
 
+/* ── Intro ── */
+.intro {
+  max-width: 880px;
+  margin: 2.5rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.intro-text {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #b6bacc;
+}
+
+/* ── Game summaries ── */
+.game-summaries {
+  max-width: 880px;
+  margin: 4rem auto 0;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.game-summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.75rem 1.75rem 1.5rem;
+}
+
+.game-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.game-meta {
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.game-desc {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: #b6bacc;
+  margin-bottom: 1.1rem;
+}
+
+.game-points {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.25rem;
+}
+
+.game-points li {
+  font-size: 0.88rem;
+  color: #a8acc0;
+  line-height: 1.7;
+  padding-left: 1.2em;
+  position: relative;
+  margin-bottom: 0.35rem;
+}
+
+.game-points li::before {
+  content: "▸";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+}
+
+.game-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+.game-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Policy ── */
+.policy {
+  max-width: 880px;
+  margin: 4rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.policy-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.policy-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem 1.25rem;
+}
+
+.policy-item h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #d6d9e8;
+  margin-bottom: 0.5rem;
+}
+
+.policy-item p {
+  font-size: 0.83rem;
+  color: #9ea2b6;
+  line-height: 1.75;
+}
+
+/* ── About block ── */
+.about-block {
+  max-width: 880px;
+  margin: 4rem auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.about-block h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.about-block p {
+  font-size: 0.9rem;
+  color: #a8acc0;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.about-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-links li {
+  margin-bottom: 0.4rem;
+}
+
+.about-links a {
+  font-size: 0.88rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.about-links a:hover {
+  text-decoration: underline;
+}
+
 /* ── Footer ── */
 footer {
   margin-top: auto;
