@@ -334,6 +334,253 @@ body {
   text-decoration: underline;
 }
 
+/* ── Article ── */
+.article-main {
+  max-width: 760px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.article-body {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.article-body h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.article-body h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 2rem 0 0.9rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--accent);
+}
+
+.article-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+}
+
+.article-body .lead {
+  font-size: 0.95rem;
+  color: #c8ccd9;
+  line-height: 1.95;
+  background: #0e1018;
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-body p {
+  font-size: 0.92rem;
+  line-height: 1.95;
+  color: #b6bacc;
+  margin-bottom: 1.1rem;
+}
+
+.article-body p strong {
+  color: #e4e6f0;
+  font-weight: 700;
+}
+
+.article-body a {
+  color: var(--accent);
+}
+
+.article-body ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.article-body ul li {
+  font-size: 0.92rem;
+  color: #b6bacc;
+  line-height: 1.85;
+  margin-bottom: 0.4rem;
+}
+
+.article-body ul.sources li {
+  font-size: 0.85rem;
+}
+
+.article-foot {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.article-foot a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+
+/* ── Comparison table ── */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.85rem;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid var(--border);
+  padding: 0.65rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+  color: #b6bacc;
+}
+
+.compare-table thead th {
+  background: #0e1018;
+  color: #e4e6f0;
+  font-weight: 700;
+}
+
+.compare-table tbody td:first-child {
+  background: #0e1018;
+  color: #d6d9e8;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ── Article list ── */
+.article-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.article-item {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.15s;
+}
+
+.article-item:hover {
+  border-color: var(--accent);
+}
+
+.article-item a {
+  display: block;
+  padding: 1.2rem 1.3rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-item h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.3rem;
+  border-left: none;
+  padding-left: 0;
+}
+
+.article-item-meta {
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.article-item-desc {
+  font-size: 0.85rem;
+  color: #a8acc0;
+  line-height: 1.7;
+}
+
+/* ── Articles section on top page ── */
+.top-articles {
+  max-width: 880px;
+  margin: 4rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.top-articles h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.top-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.top-article-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.top-article-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.top-article-card h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.top-article-card p {
+  font-size: 0.78rem;
+  color: #9ea2b6;
+  line-height: 1.7;
+}
+
+.top-articles-more {
+  text-align: center;
+}
+
+.top-articles-more a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
 /* ── Footer ── */
 footer {
   margin-top: auto;
