@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windrose の体幹・パリィシステム解説：ソウルライク戦闘の実際の挙動 - GameGuide JP</title>
+  <meta name="description" content="Windrose（Early Access）の Poise（体幹シールド）、パリィ・Perfect Block の武器制限、スタミナ消費の実挙動を、Steam Community・Fextralife・Tank's Guide を横断して整理。「ガード張りっぱなし」が罠になる理由を構造的に解説。">
+  <link rel="canonical" href="https://gameguidejp.com/articles/windrose-poise-parry-mechanics.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Windrose の体幹・パリィシステム解説：ソウルライク戦闘の実際の挙動">
+  <meta property="og:description" content="Poise シールド、パリィの武器制限、スタミナ Winded ペナルティ、ガード張りっぱなしが罠になる理由を一次情報から整理。">
+  <meta property="og:url" content="https://gameguidejp.com/articles/windrose-poise-parry-mechanics.html">
+  <meta property="og:locale" content="ja_JP">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9726522155839126"
+     crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Windrose の体幹・パリィシステム解説：ソウルライク戦闘の実際の挙動",
+    "datePublished": "2026-05-27",
+    "dateModified": "2026-05-27",
+    "inLanguage": "ja",
+    "publisher": {
+      "@type": "Organization",
+      "name": "GameGuide JP",
+      "url": "https://gameguidejp.com/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://gameguidejp.com/articles/windrose-poise-parry-mechanics.html"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" style="text-decoration:none;color:inherit;">
+        <span class="logo-mark">▶</span>
+        <span class="logo-text">GameGuide <em>JP</em></span>
+      </a>
+    </div>
+  </header>
+
+  <main class="article-main">
+    <article class="article-body">
+      <nav class="breadcrumb">
+        <a href="/">トップ</a> ＞ <a href="/articles/">記事一覧</a> ＞ Windrose 体幹・パリィシステム
+      </nav>
+
+      <h1>Windrose の体幹・パリィシステム解説：ソウルライク戦闘の実際の挙動</h1>
+      <p class="article-meta">2026-05-27 公開 / Windrose（Steam Early Access）</p>
+
+      <p class="lead">
+        Windrose をソウルライクのつもりで遊ぶと、最初に困惑するのが「パリィを当てたはずなのに見返りが薄い」「ブロックしているのにじわじわ削られる」という感覚です。これはプレイヤーが下手なわけではなく、Windrose の体幹（Poise）とスタミナの設計が、Dark Souls 系列ではなく「<strong>シールド枚数制 + 武器別パリィ性能</strong>」というハイブリッド型になっているためです。本記事では Steam Community の議論と Fextralife Wiki、コミュニティ製 Tank's Guide を横断して、実際にどう動いているかを整理します。
+      </p>
+
+      <h2>体幹は「ゲージ」ではなく「シールド枚数」で管理されている</h2>
+      <p>
+        画面下に表示されるタン色のシールドアイコンが Windrose における Poise の本体です。プレイヤーも敵も <strong>2〜3 枚のシールド</strong> を保持していて、これがゼロになった瞬間に「スタガー」状態へ移行し、人間型はよろけ、四足獣は転倒します。スタガー中は<strong>通常の数倍ダメージ</strong>が通るため、ここが事実上のすべての火力源になります。
+      </p>
+      <p>
+        ここで誤解されがちなのは、シールドは「徐々に削れるゲージ」ではなく「離散的に1枚ずつ落ちる」点です。Heavy Attack で 1 枚削るのに必要なヒット数は武器によって変わりますが、コミュニティ製 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3720663868" rel="noopener">A tank's guide to Windrose</a> によれば、シールド 1 枚は概ね Heavy Attack 2〜3 発分相当。Light Attack はその約 6 割程度の効率しかなく、シールドブレイクを狙うなら Heavy か後述のパリィが基本になります。
+      </p>
+
+      <h2>パリィは「最強の体幹削り手段」だが武器を選ぶ</h2>
+      <p>
+        Steam Discussion <a href="https://steamcommunity.com/app/3041230/discussions/0/807975542034834328/" rel="noopener">"What's the point of Parrying?"</a> や <a href="https://steamcommunity.com/app/3041230/discussions/0/837249163025496816/" rel="noopener">"Parrying/Perfect Block With Halberd"</a> で繰り返し確認されているのが、<strong>Perfect Block（パリィ）の武器制限</strong>です。
+      </p>
+      <ul>
+        <li><strong>Perfect Block 成立武器：Saber / Rapier / Greatsword の 3 種のみ</strong></li>
+        <li>Halberd・両手 Club・Crude 派生武器・盾なしの片手武器ではタイミングが合っても発動しない</li>
+        <li>Perfect Dodge は全武器で機能するが、こちらはスタミナを消費する</li>
+      </ul>
+      <p>
+        つまり「重武器でパリィができない」と感じている人は、操作のミスではなく仕様で阻まれています。ボス戦に Saber か Rapier を1本サブで持ち込む意義はここにあり、これを知らずに Halberd だけで Israel Hands に挑むと、削り合いの数値勝負になって極端に難易度が上がります。武器別パリィ性能の詳細は <a href="https://windrose.gameguidejp.com/combat/poise-stamina.html">Windrose 攻略 / 体幹・スタミナ</a> にも一覧があります。
+      </p>
+
+      <h3>パリィのタイミング窓は「振りかぶり」基準</h3>
+      <p>
+        独メディア <a href="https://mein-mmo.de/en/windrose-parieren-community-tipps,1563074/" rel="noopener">mein-mmo.de</a> がコミュニティ Tips をまとめた記事によれば、押すべきタイミングは「敵の攻撃モーションが<strong>始まった瞬間</strong>」であり、ヒット直前ではありません。Dark Souls 系のような「ギリギリで弾く」感覚で入力すると常に遅れます。フレーム単位の数値は<strong>現時点で公開情報が確認できていない</strong>ため、感覚値での調整になりますが、「振りかぶりに合わせる」を意識すると体感成功率が一気に上がるという報告は複数のスレッドで一致しています。
+      </p>
+
+      <h2>スタミナ：消費表は確認できないが「赤点滅は事故死」</h2>
+      <p>
+        スタミナ（Stamina）は攻撃・回避・ダッシュ・水泳のすべてに消費されます。武器別・モーション別の正確な消費値は<strong>現時点で公開情報が確認できていない</strong>ものの、状態遷移は明確で、Steam Community「Tips For Combat」スレッドや method.gg のガイドで以下が共有されています。
+      </p>
+      <ul>
+        <li><strong>青ゲージ</strong>：通常状態。通常通り行動可能</li>
+        <li><strong>黄ゲージ</strong>：残量警告。攻撃を控える</li>
+        <li><strong>赤点滅（Winded）</strong>：スプリント不可・ドッジ不可・回復遅延の三重ペナルティ</li>
+      </ul>
+      <p>
+        構造的に重要なのは、Winded 状態は「数秒で抜ける軽いデバフ」ではなく、<strong>事実上ボス戦で死亡確定する地雷</strong>だという点です。回避すら使えないため、次の一撃を見てから動くことができなくなります。20〜30% を残した時点で攻撃を止め、距離を取ってから黄ゲージへ戻すのが基本動作です。
+      </p>
+
+      <h3>ブロックの落とし穴：「シールドは消費するがスタミナは消費しない」</h3>
+      <p>
+        Windrose のブロックは Dark Souls の盾とは挙動が異なり、<strong>スタミナを消費しません</strong>。代わりに毎回 Poise シールドを 1 枚ずつ消費します。Steam Community の <a href="https://steamcommunity.com/app/3041230/discussions/0/807975542034834328/" rel="noopener">"What's the point of Parrying?"</a> スレッドで複数プレイヤーが指摘している通り、これは初心者にとって最大の罠です。
+      </p>
+      <p>
+        スタミナが減らないので「永遠にブロックできる」気がしてガードを張り続けると、<strong>自分のシールドが先に 0 になりスタガー入り → 大ダメージ被弾 → ワンパン</strong>の流れが完成します。さらに前方扇形しか防御できない仕様なので、複数体に囲まれた瞬間に背後から崩壊します。
+      </p>
+      <p>
+        対策はシンプルで、ブロックを「常時の防御」ではなく「<strong>パリィ入力の母体</strong>」として扱うこと。タイミングが合えば Perfect Block（パリィ）に化けてシールド 1 枚を即削れますが、外せば自分のシールドだけが消える純損失です。攻撃の合間に挟む補助動作として使い、メインの防御は Dodge と後退歩きに置きます。
+      </p>
+
+      <h2>武器種別の体幹削り効率（実用比較）</h2>
+      <p>
+        Steam Community と Fextralife Wiki の <a href="https://windrose.wiki.fextralife.com/Status_Effects" rel="noopener">Status Effects</a> ページ、および前述の Tank's Guide を横断すると、武器別の体幹削り効率は概ね次の傾向にまとまります。具体的な数値は EA 中で変動するため、序列の参考値として扱ってください。
+      </p>
+      <table>
+        <thead>
+          <tr><th>武器種</th><th>パリィ可否</th><th>体幹削り傾向</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Saber</td><td>○（完全無傷型）</td><td>パリィ起点で最効率。最汎用</td></tr>
+          <tr><td>Rapier</td><td>○（半減型）</td><td>Bleed と Plague Mark で別軸の削り</td></tr>
+          <tr><td>Greatsword</td><td>○（標準）</td><td>Heavy 一撃の削り量が大きい</td></tr>
+          <tr><td>Halberd / Club</td><td>×</td><td>Heavy で削るしかなく、被弾リスクと交換</td></tr>
+          <tr><td>Crude 派生全般</td><td>×</td><td>パリィ不可。序盤の繋ぎ専用</td></tr>
+        </tbody>
+      </table>
+
+      <h2>構造的に何が起きているか：3つのリソースの押し付け合い</h2>
+      <p>
+        ここまでをまとめると、Windrose の戦闘は「<strong>HP・スタミナ・Poise シールド</strong>」という3つのリソースを、自分と敵で同時に押し付け合うゲームだと整理できます。
+      </p>
+      <ul>
+        <li><strong>HP</strong> は被弾で減る。Rally（被弾直後の反撃で一部回収）で部分的に取り戻せる</li>
+        <li><strong>スタミナ</strong> は攻撃・回避で減る。赤点滅させると行動不能に近くなる</li>
+        <li><strong>Poise シールド</strong> は被攻撃・ブロックで減る。0 でスタガー＝大ダメージ受け窓</li>
+      </ul>
+      <p>
+        ソウルライクとの最大の差は、<strong>スタミナとシールドが分離している</strong>こと。Dark Souls では盾のブロックがスタミナを直接削るため「ブロックすればするほど反撃力を失う」設計ですが、Windrose ではブロックそのものはスタミナ中立で、代わりに Poise シールドが消えます。結果として「<strong>ブロック中に攻撃される回数が体幹を決める</strong>」という、より直接的な殴り合いの構造になっています。
+      </p>
+      <p>
+        この構造を理解すると、なぜ Saber + パリィが圧倒的に推されるのかが見えてきます。パリィは「<strong>自分のリソースを一切払わずに敵のシールドを 1 枚削れる</strong>」唯一の手段だからです。Heavy Attack はスタミナを払い、Dodge もスタミナを払う中で、パリィだけが純利得を生みます。ボス戦の TTK（撃破までの時間）が劇的に変わる理由はここにあります。
+      </p>
+
+      <h2>序盤プレイヤーが避けるべき3つの判断</h2>
+      <ul>
+        <li><strong>ガードを長押しで張り続ける</strong> — スタミナが減らないので錯覚するが、シールド枚数が先に 0 になる</li>
+        <li><strong>Halberd 主体でボス戦に挑む</strong> — パリィが効かないため、リターンの大きい体幹崩しを失う</li>
+        <li><strong>スタミナを使い切ってから離脱を考える</strong> — 赤点滅 = 回避不能。20〜30% で止める癖をつける</li>
+      </ul>
+
+      <p>
+        Windrose の戦闘は仕様を理解すれば一気に安定します。攻略全体の流れや序盤の他の落とし穴については <a href="/articles/windrose-early-pitfalls.html">Windrose で序盤に詰まる3つの落とし穴</a> も合わせて参照してください。武器別の数値・ビルド構成は <a href="https://windrose.gameguidejp.com/">Windrose 日本語攻略まとめ</a> に随時追加しています。
+      </p>
+
+      <h2>参考情報源（Tier 1）</h2>
+      <ul class="sources">
+        <li><a href="https://store.steampowered.com/app/3041230/Windrose/" rel="noopener">Steam ストアページ</a></li>
+        <li><a href="https://steamcommunity.com/app/3041230/discussions/0/807975542034834328/" rel="noopener">Steam Discussion: What's the point of Parrying?</a></li>
+        <li><a href="https://steamcommunity.com/app/3041230/discussions/0/837249163025496816/" rel="noopener">Steam Discussion: Parrying/Perfect Block With Halberd</a></li>
+        <li><a href="https://steamcommunity.com/app/3041230/discussions/0/802344996812490850/" rel="noopener">Steam Discussion: Tips For Combat</a></li>
+        <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3720663868" rel="noopener">Steam Guide: A tank's guide to Windrose</a></li>
+        <li><a href="https://windrose.wiki.fextralife.com/Status_Effects" rel="noopener">Fextralife Windrose Wiki: Status Effects</a></li>
+        <li><a href="https://mein-mmo.de/en/windrose-parieren-community-tipps,1563074/" rel="noopener">mein-mmo.de: Windrose parry community tips</a></li>
+      </ul>
+
+      <p class="article-foot">
+        <a href="/articles/">← 記事一覧へ戻る</a>
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="footer-nav">
+      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/about.html">運営者情報</a>
+      <a href="/contact.html">お問い合わせ</a>
+    </nav>
+    <p class="copyright">&copy; 2025 GameGuide JP</p>
+  </footer>
+</body>
+</html>

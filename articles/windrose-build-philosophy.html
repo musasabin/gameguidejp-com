@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windrose 序盤〜中盤ビルド構築方針：『万能ビルド』が罠になる理由 - GameGuide JP</title>
+  <meta name="description" content="Windrose（Early Access）のステータス6種の役割、PRE型/AGI型/STR型の武器対応、リスペック無料仕様、序盤の振り直しタイミング、食事・Rested バフ運用を Steam Community・method.gg・実プレイ検証から整理。「全部上げる」が罠になる構造を解説。">
+  <link rel="canonical" href="https://gameguidejp.com/articles/windrose-build-philosophy.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Windrose 序盤〜中盤ビルド構築方針：『万能ビルド』が罠になる理由">
+  <meta property="og:description" content="ステータス6種・武器スケーリング・リスペック仕様・食事バフ運用を一次情報から整理。なぜ全部上げてはいけないのか。">
+  <meta property="og:url" content="https://gameguidejp.com/articles/windrose-build-philosophy.html">
+  <meta property="og:locale" content="ja_JP">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9726522155839126"
+     crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Windrose 序盤〜中盤ビルド構築方針：『万能ビルド』が罠になる理由",
+    "datePublished": "2026-05-27",
+    "dateModified": "2026-05-27",
+    "inLanguage": "ja",
+    "publisher": {
+      "@type": "Organization",
+      "name": "GameGuide JP",
+      "url": "https://gameguidejp.com/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://gameguidejp.com/articles/windrose-build-philosophy.html"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" style="text-decoration:none;color:inherit;">
+        <span class="logo-mark">▶</span>
+        <span class="logo-text">GameGuide <em>JP</em></span>
+      </a>
+    </div>
+  </header>
+
+  <main class="article-main">
+    <article class="article-body">
+      <nav class="breadcrumb">
+        <a href="/">トップ</a> ＞ <a href="/articles/">記事一覧</a> ＞ Windrose ビルド構築方針
+      </nav>
+
+      <h1>Windrose 序盤〜中盤ビルド構築方針：『万能ビルド』が罠になる理由</h1>
+      <p class="article-meta">2026-05-27 公開 / Windrose（Steam Early Access）</p>
+
+      <p class="lead">
+        Windrose を始めた直後、ステータスポイントの振り方で迷っている間は誰も困りません。問題が起きるのは Lv 10 を超えたあたりで、「<strong>全ステータスを少しずつ上げてきたのに、敵の HP が一向に減らない</strong>」状態に陥ったときです。Steam Community でも頻繁に上がる相談で、原因は明確に Windrose の武器スケーリング設計にあります。本記事では、なぜ「万能ビルド」が機能しないのかを構造から整理し、リスペック無料仕様を前提にした序盤〜中盤の組み立てを示します。
+      </p>
+
+      <h2>前提：ステータスは「6種類」で、役割が3グループに分かれる</h2>
+      <p>
+        まず誤解を解いておくと、Windrose のステータスは <strong>5 種類ではなく 6 種類</strong>です。method.gg の <a href="https://www.method.gg/windrose/best-stats-and-talents-to-level-up-first-in-windrose" rel="noopener">Best Stats and Talents</a> と Fextralife Wiki の <a href="https://windrose.wiki.fextralife.com/Stats" rel="noopener">Stats</a> ページで一致しています。
+      </p>
+      <table>
+        <thead>
+          <tr><th>ステータス</th><th>1pt あたり</th><th>役割</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Vitality（VIT）</td><td>+13 HP</td><td>常時：耐久</td></tr>
+          <tr><td>Endurance（END）</td><td>+5 Stamina</td><td>常時：行動量</td></tr>
+          <tr><td>Mastery</td><td>+0.5% クリ率</td><td>常時：火力補助</td></tr>
+          <tr><td>Strength（STR）</td><td>重武器ダメージ</td><td>武器別スケール</td></tr>
+          <tr><td>Agility（AGI）</td><td>俊敏武器ダメージ</td><td>武器別スケール</td></tr>
+          <tr><td>Precision（PRE）</td><td>技巧武器ダメージ</td><td>武器別スケール</td></tr>
+        </tbody>
+      </table>
+      <p>
+        重要なのは、下3つの STR / AGI / PRE は<strong>装備している武器がスケールするステータスにしか効果しない</strong>点です。Saber を持っているときに STR を振っても攻撃力は 1 ミリも上がりません。これが「全部少しずつ上げた人」が DPS で詰まる構造的な原因です。
+      </p>
+
+      <h2>武器スケーリング対応表（PRE / AGI / STR）</h2>
+      <p>
+        装備画面に表示される「D→C→B→A→S」のスケーリング文字（ダークソウル式）が、その武器がどのステータスで伸びるかを表します。代表的な対応は次の通り。
+      </p>
+      <table>
+        <thead>
+          <tr><th>スケール</th><th>武器例</th><th>主な戦闘距離</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Precision</strong></td><td>Rapier / Pistol / Musket</td><td>近〜遠ハイブリッド</td></tr>
+          <tr><td><strong>Agility</strong></td><td>Saber / Greatsword / Blunderbuss</td><td>近接中心</td></tr>
+          <tr><td><strong>Strength</strong></td><td>Halberd / Club / Great Club</td><td>近接リーチ・打撃</td></tr>
+        </tbody>
+      </table>
+      <p>
+        ここで気づきたいのは、<strong>片手武器はオフハンドにピストルを装備できる</strong>点（両手武器は不可）。Precision 振りなら Rapier + Pistol、Agility 振りなら Saber + Blunderbuss と、近接と遠距離を同じステータスで両立できる組み合わせが構造的に強くなります。Drake's Pistol で Vulnerability を付与してから近接で叩く「Plague Mark コンボ」もこの構造の上に成立しています。詳細は <a href="https://windrose.gameguidejp.com/character/builds.html">Windrose 攻略 / ビルド集</a>。
+      </p>
+
+      <h2>「全部上げる」が罠になる理由：DPS は乗算で効く</h2>
+      <p>
+        万能ビルドが機能しない理由は単純な算数です。Windrose の武器ダメージはスケーリング値が S → A → B と段階的に上がる構造で、PRE を 25 まで振った場合と PRE 10 / AGI 10 / STR 5 に分散した場合では、<strong>主武器の最終火力に倍近い差</strong>が出ます。
+      </p>
+      <p>
+        さらに見落とされがちなのが、Drake's Pistol の Vulnerability や Rapier of Devastation の Plague Mark のように、<strong>火力バフが乗算で乗る</strong>パッシブが存在することです。基礎ダメージが低いと乗算しても伸びません。Bisecthosting の <a href="https://www.bisecthosting.com/blog/windrose-best-builds-character-stats-talents-weapons-armors-stat-distribution-returns" rel="noopener">Top 5 Best Builds</a> や allthings.how の <a href="https://allthings.how/windrose-best-builds-three-loadouts-that-dominate-combat/" rel="noopener">Best Builds</a> が口を揃えて「1 系統に集中」と書くのはこのためです。
+      </p>
+      <p>
+        構造的に言えば、Windrose は<strong>「火力源を 1 系統に絞り、そこに乗算バフを重ねる」設計</strong>のゲームであり、ステータスはその火力源にチップを全張りするためのリソースです。耐久（VIT）と行動量（END）は最低限で抑え、残りを主武器スケールに集中させるのが理に適っています。
+      </p>
+
+      <h2>序盤〜中盤の配分ロードマップ</h2>
+      <p>
+        Windrose 攻略 wiki の <a href="https://windrose.gameguidejp.com/character/build-guide.html">ビルド最適化ガイド</a> と method.gg の推奨を統合すると、レベル帯ごとの目安は次の通り。数値は EA 中で変動するため目安として扱ってください。
+      </p>
+      <h3>Lv 1〜5：Endurance 先行</h3>
+      <p>
+        最大の死因はスタミナ枯渇（Winded）です。詳細は <a href="/articles/windrose-poise-parry-mechanics.html">体幹・パリィシステム解説</a> でも触れていますが、END を 4〜5 まで先に振らないと、戦闘の途中で攻撃も回避もできない時間が生まれます。VIT を 3 並行、武器スケールは 1〜2 で十分。
+      </p>
+      <h3>Lv 6〜10：武器スケールを本格投入</h3>
+      <p>
+        END と VIT が整ったタイミングで、主武器のスケールに毎レベル全振りしていきます。Rare 装備が手に入り始める時期と一致しており、武器側の係数が上がるためダメージの伸びを体感しやすい区間です。
+      </p>
+      <h3>Lv 11〜15：武器スケール完走 + Mastery 着手</h3>
+      <p>
+        Plague 沼地（呪われた沼地）に入る頃には主武器スケールを 10 前後まで上げ、ここから Mastery を 3〜5 程度足してクリティカル率を底上げします。VIT も Plague 環境では再投資の価値があります。
+      </p>
+
+      <h3>Endurance ソフトキャップ 20 説</h3>
+      <p>
+        skycoach.gg や allthings.how 等の複数攻略サイトで「<strong>Endurance は 20 でソフトキャップ</strong>」との記述が共有されています。一方、Steam Community の実プレイヤー検証では Vitality のソフトキャップ（一部サイトが主張する「20 でソフトキャップ」説）が実測と矛盾するという指摘もあり、<strong>Endurance ソフトキャップの正確なしきい値は現時点で確定的な一次ソースが確認できていません</strong>。実用上は 20 前後で頭打ちを感じる、という運用上の目安として扱うのが安全です。
+      </p>
+
+      <h2>リスペックは完全無料：シーン別に振り直す前提で組む</h2>
+      <p>
+        最も活用されていない仕様が、<strong>ステータスとタレントのリスペックが完全無料・回数無制限</strong>であることです。method.gg と Steam Community で複数回確認されており、用途別の振り直しを前提に立ち回ると効率が大きく変わります。
+      </p>
+      <ul>
+        <li><strong>長距離採取・荷物運び</strong>：END を最大化してスタミナ全振り。1 ラウンドで運べる量と移動距離が伸びる</li>
+        <li><strong>探索・洞窟攻略</strong>：END + VIT バランス型。逃げる力を確保</li>
+        <li><strong>ボス戦前</strong>：武器スケール + Mastery を最大化。火力特化</li>
+        <li><strong>Plague ゾーン突入前</strong>：VIT 多めで最大 HP を底上げ</li>
+      </ul>
+      <p>
+        この使い分けを習慣化すると、「<strong>1 つのキャラで複数ビルドを切り替えながら遊ぶ</strong>」運用が成立します。新しいキャラを作る必要がなく、装備とタレント、ステータスだけを場面に合わせて入れ替える設計です。一見手間に見えますが、メニュー操作だけで完結するため、ボス前のセットアップ時間は 2〜3 分で済みます。
+      </p>
+
+      <h2>食事・Rested・エリクサーは「常時前提」のリソース</h2>
+      <p>
+        ステータスポイントを節約できる隠れた手段が消費アイテム系のバフです。
+      </p>
+      <ul>
+        <li><strong>食事バフ 2 枠</strong>：常時 2 つ埋めて遠征するのが基本。Swamp Pie + Coffee で PRE+20 / END+20 など、ステータスポイント数十回分の効果</li>
+        <li><strong>Rested バフ</strong>：Bonfire 近くで取得。スタミナ回復速度・最大量を大幅に底上げ。デコレーション配置で最大 30 分まで延長</li>
+        <li><strong>Elixir of Cruelty</strong>：+8% ダメージ。ボス前の使い切り</li>
+      </ul>
+      <p>
+        構造的に言えば、Windrose は<strong>ステータスポイントだけで火力を出すゲームではない</strong>のです。食事 + Rested + エリクサーの 3 層を前提にしたうえで、ステータスは最低ラインを担保する役割に置かれています。これを知らずに「素のステータスだけ」で殴っていると、同レベルのプレイヤーと装備差で 2 倍以上の火力差が生まれます。
+      </p>
+
+      <h2>中盤での切り替えタイミング</h2>
+      <p>
+        Rare 装備から Epic 装備への昇格（Ascension）が始まる頃が、ビルドの 2 回目の見直し時期です。Tumbaga Ingot で Rare を Epic に昇格させると追加パッシブが解放され、Rapier of a Thousand Cuts の場合は「キル時にブリードを最近傍へ転移」、Drake's Pistol の場合は Vulnerability 強化など、<strong>パッシブ前提でビルドが組み変わる</strong>武器が複数あります。
+      </p>
+      <p>
+        切り替えタイミングの判断基準は、(1) Epic 昇格用 Ingot が安定供給されるようになったか、(2) Plague Mark コンボの構成パーツ（Drake's Pistol + Rapier of Devastation）が揃ったか、の 2 点。両方 YES ならフルリスペックを掛けて Plague Mark コンボ型に組み替える価値があります。
+      </p>
+
+      <h2>まとめ：万能を諦めると Windrose は急に簡単になる</h2>
+      <ul>
+        <li>ステータスは 6 種で、攻撃力は STR/AGI/PRE の 1 系統にしか効かない</li>
+        <li>万能ビルドは乗算バフが弱く成立しない。1 系統集中が前提</li>
+        <li>リスペック無料を活用し、採取・探索・ボス・Plague でシーン別に振り直す</li>
+        <li>食事 + Rested + エリクサーは「常時前提」のリソース層</li>
+        <li>Epic 昇格期にもう一度ビルドを組み直すのが定石</li>
+      </ul>
+
+      <p>
+        Windrose は知らないと「全部中途半端」で詰まりやすいゲームですが、構造を理解すると 1 系統集中 + シーン別リスペックで一気に安定します。戦闘そのものの挙動を理解したい場合は <a href="/articles/windrose-poise-parry-mechanics.html">Windrose の体幹・パリィシステム解説</a> も合わせてどうぞ。武器別の数値・タレント詳細は <a href="https://windrose.gameguidejp.com/">Windrose 日本語攻略まとめ</a> で随時更新しています。
+      </p>
+
+      <h2>参考情報源（Tier 1）</h2>
+      <ul class="sources">
+        <li><a href="https://store.steampowered.com/app/3041230/Windrose/" rel="noopener">Steam ストアページ</a></li>
+        <li><a href="https://steamcommunity.com/app/3041230/" rel="noopener">Steam Community（"Level up Vitality is very nonsensical" / "Tips For Combat" 他）</a></li>
+        <li><a href="https://www.method.gg/windrose/best-stats-and-talents-to-level-up-first-in-windrose" rel="noopener">method.gg: Best Stats and Talents</a></li>
+        <li><a href="https://windrose.wiki.fextralife.com/Stats" rel="noopener">Fextralife Windrose Wiki: Stats</a></li>
+        <li><a href="https://allthings.how/windrose-best-builds-three-loadouts-that-dominate-combat/" rel="noopener">allthings.how: Best Builds</a></li>
+        <li><a href="https://www.bisecthosting.com/blog/windrose-best-builds-character-stats-talents-weapons-armors-stat-distribution-returns" rel="noopener">Bisecthosting: Top 5 Best Builds</a></li>
+        <li><a href="https://www.reddit.com/r/WindroseGame/" rel="noopener">r/WindroseGame</a></li>
+      </ul>
+
+      <p class="article-foot">
+        <a href="/articles/">← 記事一覧へ戻る</a>
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="footer-nav">
+      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/about.html">運営者情報</a>
+      <a href="/contact.html">お問い合わせ</a>
+    </nav>
+    <p class="copyright">&copy; 2025 GameGuide JP</p>
+  </footer>
+</body>
+</html>
