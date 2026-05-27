@@ -29,6 +29,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gameguidejp.com/articles/windrose-multiplayer-pitfalls.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gameguidejp.com/articles/steam-early-access-checklist.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gameguidejp.com/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
