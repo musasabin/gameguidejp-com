@@ -4,29 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>運営者情報 - GameGuide JP</title>
-  <meta name="description" content="GameGuide JP の運営者情報です。">
+  <meta name="description" content="GameGuide JP の運営者情報・サイト構造・運営方針・編集ポリシーをまとめたページです。海外発 PC ゲームの日本語攻略情報を、一次情報を元に提供しています。">
   <link rel="canonical" href="https://gameguidejp.com/about.html">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9726522155839126"
      crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <style>
-    .prose { max-width: 720px; margin: 0 auto; }
-    .prose h2 { font-size: 1.15rem; color: #c0c4d8; margin: 2rem 0 0.75rem; }
-    .prose p { font-size: 0.95rem; color: #b0b4c8; line-height: 1.8; }
+    .prose { max-width: 760px; margin: 0 auto; }
+    .prose h2 { font-size: 1.2rem; color: #fff; margin: 2.5rem 0 0.9rem; padding-left: 0.75rem; border-left: 3px solid #6c8fff; }
+    .prose h3 { font-size: 1rem; color: #d6d9e8; margin: 1.5rem 0 0.6rem; }
+    .prose p, .prose li { font-size: 0.92rem; color: #b6bacc; line-height: 1.95; }
+    .prose ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .prose li { margin-bottom: 0.4rem; }
     .prose a { color: #7b8fd4; }
     .back-link { display: inline-block; margin-bottom: 2rem; color: #8b8fa8; text-decoration: none; font-size: 0.9rem; }
     .back-link:hover { color: #c0c4d8; }
-    table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
-    th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid #2a2d3e; font-size: 0.95rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; margin-bottom: 1.5rem; }
+    th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid #2a2d3e; font-size: 0.92rem; vertical-align: top; }
     th { color: #8b8fa8; font-weight: normal; width: 30%; white-space: nowrap; }
-    td { color: #b0b4c8; }
+    td { color: #b6bacc; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>GameGuide JP</h1>
-      <p class="tagline">日本語ゲーム攻略まとめ</p>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" style="text-decoration:none;color:inherit;">
+        <span class="logo-mark">▶</span>
+        <span class="logo-text">GameGuide <em>JP</em></span>
+      </a>
     </div>
   </header>
 
@@ -46,43 +51,134 @@
         </tr>
         <tr>
           <th>運営者</th>
-          <td>個人運営</td>
+          <td>musasabin（個人運営）</td>
         </tr>
         <tr>
           <th>設立</th>
-          <td>2025年</td>
+          <td>2026年4月</td>
         </tr>
         <tr>
           <th>目的</th>
-          <td>PCゲーム・コンソールゲームの日本語攻略情報の提供</td>
+          <td>海外発 PC ゲームの日本語攻略情報の提供（一次情報ベース）</td>
+        </tr>
+        <tr>
+          <th>連絡手段</th>
+          <td><a href="/contact.html">お問い合わせフォーム</a></td>
         </tr>
       </table>
 
-      <h2>サイトについて</h2>
-      <p>GameGuide JP は、日本語での攻略情報が少ない海外ゲームを中心に、実プレイに基づいた攻略情報をまとめることを目的とした個人運営のサイト群です。</p>
+      <h2>サイトの目的と背景</h2>
+      <p>
+        GameGuide JP は、海外発の PC ゲーム — とくに英語圏発のインディー作品や Early Access タイトル — について、日本語で攻略情報を提供することを目的とした個人運営のサイト群です。Steam で気になるタイトルを見つけて遊び始めても、日本語の攻略情報が見つからない・古い・機械翻訳で読みにくい、という体験は多くの日本人プレイヤーに共通する課題です。
+      </p>
+      <p>
+        この課題の構造的な背景については、当サイトの記事「<a href="/articles/why-no-japanese-wiki.html">海外 EA ゲームの日本語攻略情報が薄い本当の理由</a>」で詳しく整理しています。当サイトは、英語圏のプレイヤーコミュニティを継続的に観察し、日本語で再整理することで、この情報格差を少しでも埋めることを目指しています。
+      </p>
 
-      <h2>運営サイト一覧</h2>
+      <h2>サイト構造</h2>
+      <p>
+        当サイトは <strong>ポータルサイト（このドメイン）</strong> と、<strong>各ゲームタイトル別の攻略 wiki（サブドメイン）</strong> で構成されています。
+      </p>
+
+      <h3>ポータルサイト（gameguidejp.com）</h3>
+      <p>
+        ジャンル横断のコラム・比較記事・購入判断ガイドなどを提供しています。「特定のゲームではなく、海外ゲーム全般に共通する話題」を扱うのがこのドメインの役割です。<a href="/articles/">記事一覧はこちら</a>。
+      </p>
+
+      <h3>攻略 wiki（サブドメイン）</h3>
+      <p>
+        各ゲームタイトル専用の詳細攻略 wiki を、サブドメインで個別運営しています。現在、以下のサイトを公開中です。
+      </p>
       <table>
         <tr>
           <th>サイト名</th>
           <td><a href="https://windrose.gameguidejp.com/">Windrose 日本語攻略まとめ</a></td>
         </tr>
+        <tr>
+          <th>対象</th>
+          <td>Windrose（Steam Early Access）/ 開発: Kraken Express / 販売: Pocketpair Publishing</td>
+        </tr>
+        <tr>
+          <th>内容</th>
+          <td>武器・防具・タレント・ビルド・船カスタマイズ・海戦・拠点建築・ボス攻略・各バイオームのリソースマップ等、70+ ページ</td>
+        </tr>
       </table>
 
+      <h2>編集ポリシー</h2>
+
+      <h3>1. 一次情報を優先する</h3>
+      <p>
+        以下を一次情報として優先的に参照します:
+      </p>
+      <ul>
+        <li>Steam Community Hub（Discussions / Guides / 開発者投稿）</li>
+        <li>該当ゲームの subreddit（r/[ゲーム名]）</li>
+        <li>Fextralife / Fandom / wiki.gg の英語 Wiki</li>
+        <li>公式 Discord サーバーの patch-notes / announcements チャンネル</li>
+        <li>開発元の公式 SNS・ブログ投稿</li>
+        <li>実機検証（スクリーンショット・録画）</li>
+      </ul>
+      <p>
+        数値情報は複数の一次ソースで照合してから掲載します。各情報源の使い方は <a href="/articles/fextralife-fandom-wiki-guide.html">Wiki 活用ガイド</a> および <a href="/articles/foreign-game-discord-guide.html">Discord 情報収集ガイド</a> で詳しく解説しています。
+      </p>
+
+      <h3>2. 裏付けの取れない情報は明示する</h3>
+      <p>
+        裏付けの取れない記述や、ソース間で食い違う情報については、その旨を「現時点で確認できていない」「コミュニティで議論中」などと明示します。後から訂正が必要になった場合は、各サブサイトの changelog（更新履歴）にすべて記録し、訂正の経緯を透明化します。
+      </p>
+
+      <h3>3. 独自検証を伴わない自動生成記事は情報源としない</h3>
+      <p>
+        近年急増している、英語サイトを機械翻訳しただけで独自検証を伴わない記事は、情報源として採用しません。英語圏のプレイヤーコミュニティ・公式情報を直接参照し、訳出の責任を持って整理します。
+      </p>
+
+      <h3>4. パッチ追従と更新頻度</h3>
+      <p>
+        Early Access タイトルは大型パッチに合わせて見直しを行い、リリース済みタイトルは新規ビルドや海外コミュニティの議論を反映する形で随時更新しています。各サブサイトの changelog ページに更新履歴を記載しており、いつ・どのページが・どのソースを根拠に更新されたかが追跡可能です。
+      </p>
+
+      <h2>収益化について</h2>
+      <p>
+        当サイトは個人運営であり、サーバー維持費・ドメイン更新費・調査時間の対価として、Google AdSense によるディスプレイ広告を掲載予定です。広告配信に関する詳細・データ取り扱いについては <a href="/privacy.html">プライバシーポリシー</a> をご確認ください。
+      </p>
+      <p>
+        広告以外に、コンテンツの中立性を損なう恐れのある提携（特定ゲームの宣伝記事の有料受託・ステマ・アフィリエイト誘導記事など）は行いません。Steam ストアページや Discord 招待リンクなど、読者の利便性のために設置した外部リンクはアフィリエイトではなく公式 URL です。
+      </p>
+
+      <h2>取り扱い予定タイトル</h2>
+      <p>
+        現在公開している Windrose に加え、将来的には英語圏で話題になっているサバイバル系・RPG 系・船舶系の Early Access タイトルを段階的に追加していく予定です。タイトルの選定基準は以下の通りです。
+      </p>
+      <ul>
+        <li>日本語コミュニティの規模が小さく、攻略情報が不足している</li>
+        <li>英語圏で一定以上のプレイヤー数があり、Tier 1 情報源が十分</li>
+        <li>運営者自身が実プレイで検証可能</li>
+        <li>長期運営に耐える開発体制（実績ある開発元・ロードマップ提示済み）</li>
+      </ul>
+
       <h2>お問い合わせ</h2>
-      <p><a href="/contact.html">お問い合わせフォーム</a>よりご連絡ください。誤情報のご指摘・情報提供も歓迎します。技術的な質問は各攻略サイトのGitHub Issueもご利用いただけます。</p>
+      <p>
+        誤情報のご指摘・情報提供・取り扱いタイトルのご要望などは、<a href="/contact.html">お問い合わせフォーム</a> よりご連絡ください。技術的な質問・wiki 内容への提案は、各攻略サイトの GitHub Issue もご利用いただけます。
+      </p>
+
+      <h2>関連リンク</h2>
+      <ul>
+        <li><a href="/">トップページ</a></li>
+        <li><a href="/articles/">記事一覧</a></li>
+        <li><a href="/privacy.html">プライバシーポリシー</a></li>
+        <li><a href="/contact.html">お問い合わせ</a></li>
+        <li><a href="https://windrose.gameguidejp.com/">Windrose 日本語攻略まとめ</a></li>
+      </ul>
     </div>
   </main>
 
   <footer>
-    <div class="container">
-      <nav class="footer-nav">
-        <a href="/privacy.html">プライバシーポリシー</a>
-        <a href="/about.html">運営者情報</a>
-        <a href="/contact.html">お問い合わせ</a>
-      </nav>
-      <p class="copyright">&copy; 2025 GameGuide JP</p>
-    </div>
+    <nav class="footer-nav">
+      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/about.html">運営者情報</a>
+      <a href="/contact.html">お問い合わせ</a>
+    </nav>
+    <p class="copyright">&copy; 2025 GameGuide JP</p>
   </footer>
 </body>
 </html>

@@ -1,136 +1,170 @@
 # GameGuide JP AdSense 運用ランブック
 
-**作成: 2026-05-17 / 更新: 2026-05-17（不承認→再申請準備中） / 想定 Claude 停止: 2026-05-24**
+**作成: 2026-05-17 / 大幅改訂: 2026-05-27 / 想定 Claude 停止: 2026-05-24**
 
-5/24 以降、Claude 支援なしで AdSense 承認・不承認・運用変更に対応できることを目的としたランブック。
+5/24 以降、Claude 支援なしで AdSense 承認・運用変更・コンテンツ追加に対応できることを目的としたランブック。
 
 ---
 
-## ⚠️ 申請履歴
+## ⚠️ 重要：戦略を抜本的に変更しました
+
+### 当初の楽観的計画（誤り）
+- 5/17 申請 → 数日で承認 → 5/24 までに広告配信開始
+
+### 不承認後に判明した事実（証拠付き）
+- **「有用性の低いコンテンツ」不承認の中央値ライン: 独自ドメイン × 20-30記事 × 各 800-2,500字 × ドメイン年齢 3-6ヶ月以上**（[stackedbuddy 2025 Checklist](https://www.stackedbuddy.com/google-adsense-approval-2025-9-step-checklist/) / [theguidex 2026](https://theguidex.com/google-adsense-approval/) / [squarearth 2025](https://squarearth.shop/)）
+- AdSense は **apex を主評価**。サブドメイン（windrose.gameguidejp.com の70+ページ）は審査スコアにほぼ寄与しない（[Google 公式](https://support.google.com/adsense/answer/2784438?hl=ja) / [Strategy by ipe](https://ipeinc.jp/media/sub-domain-adsense/)）
+- ドメイン年齢 1ヶ月では足りない。3ヶ月以上を待つべき
+- 3記事の追加では覆せない構造的問題
+
+### 新しい計画（証拠ベース）
+- **5/27 時点で apex に 13 記事を配置済み**（3カテゴリ整理: 攻略 / ジャンル比較 / 情報源）
+- **2026-06 から月8記事ペースで追加運用**
+- **2026-07末（ドメイン年齢3ヶ月、記事 25本超）で再申請**
+
+---
+
+## 申請履歴
 
 | 日付 | アクション | 結果 |
 |---|---|---|
 | 2026-05-17 | 初回申請 | **不承認**（理由: 有用性の低いコンテンツ） |
 | 2026-05-17 | apex に独自記事3本追加、コンテンツサイト化 | デプロイ完了 |
-| 2026-05-22〜24 | 再申請ボタン押下（インデックス再促進後） | 結果待ち |
-
-不承認時に追加した記事:
-- `/articles/windrose-early-pitfalls.html`
-- `/articles/survival-ship-games-comparison.html`
-- `/articles/why-no-japanese-wiki.html`
-- `/articles/index.html`（一覧ハブ）
+| 2026-05-27 | apex に独自記事10本追加（計13本）、About 大幅加筆 | デプロイ完了 |
+| **2026-06〜07** | 月8記事ペースで追加運用 | user 単独で実施 |
+| **2026-07末** | 2回目の再申請 | 結果待ち |
 
 ---
 
-## TL;DR — 現在の状態（2026-05-17 時点）
+## 0. 現在の構成（2026-05-27 時点）
 
-- **AdSense 申請: 1回不承認 → 再申請準備中**（pub-9726522155839126 を使用 / staypdf.com と同じアカウント）
-- **申請ドメイン: gameguidejp.com（apex）**
-- **公開サブドメイン: windrose.gameguidejp.com のみ**（dragonkin / everwind は noindex+robots Disallow で一時非公開）
-- **CMP（同意管理）設定: 完了**（3択型: 同意する / 同意しない / オプションを管理する）
-- **AdSense スクリプト設置: 完了**
-- **ads.txt 配置: 完了**（apex + windrose）
+### apex 配下のコンテンツ
+- ポータルトップ（index.html）：Windrose カード + 解説 + 運営方針 + 最新記事カード
+- About / Privacy / Contact / 404
+- **記事13本**（articles/）
+  - 攻略ガイド（Windrose）: 4本（early-pitfalls / poise-parry / build-philosophy / multiplayer）
+  - ジャンル比較・考察: 4本（survival-ship-comparison / casual-vs-hardcore / soulslike-survival / 2026-survival-ea-trends）
+  - 情報源の使い方・メタ: 5本（why-no-japanese-wiki / fextralife-fandom / discord-guide / slang-glossary / steam-ea-checklist）
 
-| 日付目安 | やること |
-|---|---|
-| 5/17〜21 | Google 再クロール待ち。Search Console で /articles/ 配下を URL 検査・インデックスリクエスト |
-| 5/22 | AdSense 管理画面で「審査をリクエスト」ボタン押下 |
-| 5/22〜24 | 審査待ち |
-| 5/24 後 | Claude なしで承認/不承認対応（再不承認時はランブックの「不承認だった場合の対応」参照） |
-
-### 5/22 までに必ずやること
-
-1. **Search Console で URL 検査・インデックスリクエスト**:
-   - `https://gameguidejp.com/`
-   - `https://gameguidejp.com/articles/`
-   - `https://gameguidejp.com/articles/windrose-early-pitfalls.html`
-   - `https://gameguidejp.com/articles/survival-ship-games-comparison.html`
-   - `https://gameguidejp.com/articles/why-no-japanese-wiki.html`
-2. **sitemap.xml の再送信**: Search Console > サイトマップ > `sitemap.xml` を入力して送信
-3. **インデックス確認**: 5/21 までに全記事がインデックスされていることを確認
-4. **AdSense 再申請**: 5/22 に管理画面の「審査をリクエスト」
-
----
-
-## 0. 現在の構成
-
-### サイト
-- **apex**: https://gameguidejp.com / GitHub Pages（`musasabin/gameguidejp-com` リポジトリの master ブランチ）
-- **windrose**: https://windrose.gameguidejp.com / GitHub Pages（`windrose-jp/windrose-jp.github.io` リポジトリの main ブランチ）
-- **dragonkin（非公開中）**: https://dragonkin.gameguidejp.com / `dragonkin-jp/dragonkin-jp.github.io`
-- **everwind（非公開中）**: https://everwind.gameguidejp.com / `everwind-jp/everwind-jp.github.io`
-
-### DNS / Cloudflare
-- Cloudflare で各サブドメインの CNAME を `<repo>.github.io` に向けている（DNS only モード = グレー雲）
-- HTTPS は GitHub Pages の Let's Encrypt 自動発行
+### サブドメイン
+- **windrose**: https://windrose.gameguidejp.com / 70+ ページ（mdBook）/ 公開中
+- **dragonkin**（一時非公開）: noindex + robots Disallow
+- **everwind**（一時非公開）: noindex + robots Disallow
 
 ### AdSense
 - **pub-ID**: `ca-pub-9726522155839126`（staypdf.com と共用 / 1人1アカウント制）
-- **スニペット**: apex 全 HTML（index/about/privacy/contact）+ windrose の `theme/head.hbs`
-- **ads.txt**: `google.com, pub-9726522155839126, DIRECT, f08c47fec0942fa0`
-- **CMP**: Google 標準 CMP の3択型を選択（GDPR 準拠）
-
-### Google Analytics
-- **windrose**: G-9LKY6PPWE7
-- **dragonkin**: G-V4Q4BJQFJ4
-- **everwind**: G-8NY90P6BJT
-- **apex**: 未設置（コンテンツ少ないため任意）
+- **スニペット**: apex 全 HTML（index / articles/ 全ファイル / about / privacy / contact）+ windrose の `theme/head.hbs`
+- **ads.txt**: `google.com, pub-9726522155839126, DIRECT, f08c47fec0942fa0`（apex + windrose）
+- **CMP**: Google 標準 CMP の3択型（GDPR 準拠）
 
 ### Search Console
 - 登録済みプロパティ:
-  - `https://windrose.gameguidejp.com/`（URL prefix）
-  - `https://gameguidejp.com/`（URL prefix）
-  - 各サブドメインも個別登録の可能性あり
-- 所有権確認ファイル: `googlea09a7a225e1f583e.html` 等（リポジトリルートにある HTML）
+  - `https://gameguidejp.com/`
+  - `https://windrose.gameguidejp.com/`
+- 所有権確認ファイル: `googlea09a7a225e1f583e.html` 等
 
 ---
 
-## 1. 審査結果が来たら
+## 1. 6月〜7月のコンテンツロードマップ（user 単独で実行）
 
-### 承認の場合
-1. AdSense 管理画面で「広告配信開始」が表示される
-2. 自動広告（Auto Ads）が gameguidejp.com / windrose.gameguidejp.com で配信開始
-3. **何もしなくて OK**（スクリプトが既に設置済みのため）
-4. 翌日以降、AdSense 管理画面でクリック数・表示回数を確認
-5. 1週間以内に最初の収益データが見える
+### 月8記事ペースの設計
+- 週2記事 = 月8記事 × 2ヶ月 = 16本追加 → 7月末で計29本（目標 20-25本超え）
 
-### 不承認の場合
-1. **理由メールの全文を保存**（スクリーンショット + コピーをパスワードマネージャ等に）
-2. AdSense 管理画面の「サイト」→ 該当ドメインを開き、詳細な不承認理由を確認
-3. 下記「不承認だった場合の対応」へ
+### テーマ案ストック（記事タイトル候補）
+
+**攻略ガイド系（windrose 中心）:**
+1. Windrose の食料・薬・バフ食材の選び方
+2. Windrose の島ごとのリソース最適周回ルート
+3. Windrose のクラフトステーション解放順
+4. Windrose のクエスト報酬ベストピック
+5. Windrose の派閥（Faction）名声の上げ方
+6. Windrose のソロ vs マルチで変わる戦略
+7. Windrose の終盤コンテンツ（追加され次第）
+8. Windrose 大型パッチごとのメタ変化まとめ
+
+**ジャンル比較・考察系:**
+9. Subnautica 2 の Early Access 評価（リリース後）
+10. Enshrouded vs Valheim の建築設計の違い
+11. PvE専用サバイバル vs PvPサバイバル の選び方
+12. インディーEA成功例（Hades, Valheim, Slay the Spire）に共通する設計パターン
+13. 2026 後半の海外PCゲーム注目作（夏〜秋リリース予定）
+14. ゲーム実況・配信から攻略情報を集めるコツ
+
+**情報源・メタ系:**
+15. Reddit のサブレディットを定期巡回するコツ
+16. wiki.gg と Fandom の違い（Fandom 離脱トレンド）
+17. Steam Workshop の MOD で公式攻略が崩れる事例
+18. 海外攻略動画（YouTube）と日本語動画の情報差
+19. 海外実況者（Twitch / YouTube）のおすすめチャンネル
+20. ゲームジャンルごとの英語用語サマリ（ARPG / FPS / MMO）
+
+### 記事執筆ルール（必須）
+- **各記事 1,500-3,000字**
+- **Tier 1 引用必須**（Steam Community / Reddit / Fextralife / 公式 Discord / wiki.gg）
+- **独自視点30%以上**（複数ソース比較 / 構造的考察 / 具体的失敗例）
+- **AI生成感を避ける**（定型表現「〜について解説します」「最後に」は禁止）
+- **既存記事への内部リンク**（最低2本）
+- **末尾に Tier 1 参考情報源リスト**
+
+### 記事執筆テンプレート
+新規記事は `articles/windrose-early-pitfalls.html` をコピーして使う。差し替え箇所:
+- `<title>` / `<meta description>` / `<link canonical>`
+- `<script type="application/ld+json">` の headline / url
+- `<h1>` と breadcrumb
+- 本文・参考情報源
+- 公開後: `articles/index.html` / `sitemap.xml` / `index.html`（最新記事カード）に追加
 
 ---
 
-## 2. 不承認だった場合の対応
+## 2. 7月末の再申請手順
+
+### 2-1. 申請前の最終チェック（必須）
+- [ ] 記事数 20+ 達成（理想 25+）
+- [ ] 各記事インデックス済（Search Console「ページ」レポートで確認）
+- [ ] AdSense スクリプトが全 HTML に挿入されている
+- [ ] ads.txt が `https://gameguidejp.com/ads.txt` で表示される
+- [ ] 全リンクが切れていない（404 が出ない）
+- [ ] DevTools の Console エラーゼロ
+- [ ] スマホ表示確認（レスポンシブ崩れチェック）
+
+### 2-2. 申請手順
+1. https://www.google.com/adsense/ にログイン
+2. 左ナビ「サイト」→ `gameguidejp.com` のステータス確認
+3. 「審査をリクエスト」ボタンを押下
+4. 審査開始（通常 1〜14 日）
+
+### 2-3. 申請後
+- 結果は AdSense 管理画面 + 登録メール
+- **承認**: 自動広告（Auto Ads）が gameguidejp.com / windrose.gameguidejp.com で配信開始
+- **不承認**: 理由メールを必ず全文保存（スクリーンショット + コピー）
+
+---
+
+## 3. 不承認だった場合の対応
 
 ### よくある不承認理由と対応
 
 | 理由 | 対応 |
 |---|---|
-| 「有用性の低いコンテンツ」 | windrose の薄ページを充実させる。ranged-weapons / building/styles を SUMMARY.md に戻して内容追加 |
-| 「価値の低い広告枠」 | head.hbs に AdSense スクリプトがあるか確認、apex の各 HTML も同様 |
-| 「Google ポリシー違反」 | 具体URL指摘があればそのページ精査、なければ全コンテンツの「翻訳まとめ」「実プレイ」等の表記を再点検 |
-| 「ナビゲーションが困難」 | apex から windrose への導線増強、windrose の内部リンク密度を上げる |
-| 「サイトの停止または利用不可」 | GitHub Pages デプロイ反映の遅れ。24時間後に再申請 |
-| 「重複コンテンツ」 | windrose の各ページの canonical を確認 |
+| 「有用性の低いコンテンツ」 | 記事を5本以上追加（各 2,000字+）、最低1ヶ月空けてから再申請 |
+| 「価値の低い広告枠」 | AdSense スクリプトの全 HTML 配置を再確認、ads.txt の存在確認 |
+| 「Google ポリシー違反」 | 具体URL指摘があればそのページ精査、なければ「翻訳まとめ」「AI生成」表記の有無を全文検索 |
+| 「ナビゲーションが困難」 | breadcrumb / 内部リンク密度・記事カテゴリ整理を強化 |
+| 「サイトの停止または利用不可」 | デプロイ反映遅れ。24時間後に再申請 |
+| 「重複コンテンツ」 | canonical タグを全 HTML で確認 |
 
-### 再申請手順
-1. 不承認理由を解消する変更をコミット・プッシュ
-2. GitHub Pages のデプロイ完了確認（数分〜10分）
-3. Search Console で変更ページの URL 検査 → インデックスリクエスト
-4. 1〜2 週間待つ（インデックス再促進）
-5. AdSense 管理画面 → サイト → 該当ドメイン → 「審査をリクエスト」
-
-**注意**: 同じ問題で何度落ちても通らないため、必ず変更を加えてから再申請する。
+### 再申請のクールダウン
+- 不承認後、最低 **1〜2 週間**は記事追加 + インデックス促進をしてから再申請
+- 同じ問題で連続不承認すると審査が厳格化する（経験則）
 
 ---
 
-## 3. デプロイの仕組み
+## 4. デプロイの仕組み
 
 ### gameguidejp.com（apex）
 - リポジトリ: `musasabin/gameguidejp-com`
 - ブランチ: `master`
-- デプロイ: GitHub Pages 標準（リポジトリの Settings > Pages 設定）
+- デプロイ: GitHub Pages 標準（Settings > Pages）
 - `git push origin master` で自動デプロイ
 - 反映: 通常 1〜5 分
 
@@ -141,46 +175,15 @@
 - `.github/workflows/deploy.yml` で `mdbook build` → `book/` を Pages へアップロード
 - 反映: 通常 2〜5 分
 
-### よくある問題
-- **「Pages のビルドが失敗」**: GitHub Actions のログを確認。SUMMARY.md と実ファイルの不整合が多い
-- **「カスタムドメインが効かない」**: Cloudflare の DNS 設定を確認、proxy（オレンジ雲）を OFF にする
-- **「HTTPS 証明書エラー」**: GitHub Pages 設定で `Enforce HTTPS` を一旦 OFF→ON で再発行
-
 ---
 
-## 4. dragonkin / everwind を再公開する手順
+## 5. アクセス情報の保管場所（Claude 停止前にチェック）
 
-windrose 単体での AdSense 承認後、品質改修を経て両サブドメインを再公開する場合：
-
-1. **品質改修**:
-   - dragonkin: `playerauctions.com` 等 Tier 3 サイト引用を全削除（5ファイル）、「攻略まとめ」「翻訳・引用」表記を中立化、SlashingCreeps 依存ページの独自リライト
-   - everwind: 各ページ冒頭の `📌 情報源: EverwindWiki` 削除、「情報収集中」プレースホルダー（162箇所）を埋めるか SUMMARY から除外
-2. **noindex 解除**:
-   - `theme/head.hbs` の `<meta name="robots" content="noindex, nofollow">` を削除
-   - `robots.txt` を `Disallow: /` から `Allow: /` に戻す
-3. **apex に再表示**:
-   - `gameguidejp-com/index.html` にカードと解説セクションを復活
-   - `about.html` の運営サイト一覧に追加
-4. **AdSense サイト追加**:
-   - AdSense 管理画面で `dragonkin.gameguidejp.com` `everwind.gameguidejp.com` をサブドメイン単位で個別追加
-   - apex 承認済みなので継承される可能性もある（要確認）
-
----
-
-## 5. 5/24 アカウント停止後でも継続するための準備
-
-### アクセス情報の保管場所
 - **GitHub `musasabin/*` `windrose-jp/*` 等**: パブリックリポジトリ。push 権限のある Git 認証情報を保存
 - **Cloudflare**: アカウント情報をパスワードマネージャに保存
-- **Search Console**: Google アカウントで管理。**停止前に追加管理者を1人登録推奨**
-- **AdSense**: Google アカウント単独。アカウント停止と連動する可能性 → サポート申請の準備
-- **Web3Forms**: contact.html 内に access_key `93ac96ab-f6df-4b2e-b35b-33bd1b74d8ff`（変更不要）
-
-### 引き継ぎが必要な場合の最低限のドキュメント
-- このランブック（`docs/adsense-runbook.md`）
-- `D:/Code/game-wiki/CLAUDE.md`（ネットワーク全体の方針）
-- `D:/Code/game-wiki/.claude/research-policy.md`（情報源ポリシー）
-- 各リポジトリの `CLAUDE.md`（個別の編集方針）
+- **Search Console**: Google アカウントで管理。**追加管理者を1人登録推奨**
+- **AdSense**: Google アカウント単独
+- **Web3Forms**: contact.html 内に access_key `93ac96ab-f6df-4b2e-b35b-33bd1b74d8ff`
 
 ---
 
@@ -192,7 +195,7 @@ windrose 単体での AdSense 承認後、品質改修を経て両サブドメ�
 - 反映に最大 10 分
 
 ### 「Search Console で URL がインデックス対象外」
-- robots.txt 確認: `https://gameguidejp.com/robots.txt` / `https://windrose.gameguidejp.com/robots.txt`
+- robots.txt 確認: `https://gameguidejp.com/robots.txt`
 - 該当ページの `<meta name="robots">` を確認
 - canonical が他URLを指していないか
 - dragonkin / everwind は意図的に noindex 中（正常）
@@ -202,12 +205,8 @@ windrose 単体での AdSense 承認後、品質改修を経て両サブドメ�
 - CSP（Content Security Policy）でブロックされていないか
 - ad blocker が有効になっていないか（自分の環境）
 
-### 「重複コンテンツ警告」
-- canonical タグが正しいか確認
-- subdomain（windrose）と apex で同じコンテンツがないか
-
 ### 「CMP（同意バナー）が表示されない」
-- EEA/UK/Swiss IP からのみ表示される設定なので、日本からは見えない（正常）
+- EEA/UK/Swiss IP からのみ表示される設定（日本からは見えない）
 - VPN で EU IP に切り替えて確認可能
 
 ---
@@ -221,6 +220,7 @@ windrose 単体での AdSense 承認後、品質改修を経て両サブドメ�
 | apex プライバシー | `D:/Code/game-wiki/gameguidejp-com/privacy.html` |
 | apex 運営者情報 | `D:/Code/game-wiki/gameguidejp-com/about.html` |
 | apex コンタクト | `D:/Code/game-wiki/gameguidejp-com/contact.html` |
+| apex 記事 | `D:/Code/game-wiki/gameguidejp-com/articles/*.html` |
 | apex sitemap | `D:/Code/game-wiki/gameguidejp-com/sitemap.xml` |
 | apex robots | `D:/Code/game-wiki/gameguidejp-com/robots.txt` |
 | windrose プライバシー | `D:/Code/game-wiki/windrose-jp/privacy.md` |
@@ -232,45 +232,27 @@ windrose 単体での AdSense 承認後、品質改修を経て両サブドメ�
 
 ---
 
-## 8. 5/24 までのチェックリスト
+## 8. 主要な参考エビデンス
 
-### 必須
-- [x] 5/17: AdSense 申請完了・CMP 設定完了
-- [ ] 5/17〜23: 毎日 AdSense 管理画面・登録メール確認
-- [ ] 結果次第（承認/不承認）で対応
+このランブックの判断根拠（再申請時期・記事数目安・apex 主評価原則）は以下のソースに基づきます。
 
-### あると安心
-- [ ] Search Console に追加管理者を1人登録
-- [ ] AdSense 登録メール・パスワードをパスワードマネージャに保存
-- [ ] このランブックを Google ドライブ等にコピー
-- [ ] 承認後: 1週間以内のクリック数・表示回数を確認
-
----
-
-## 9. 5/24 後の運用
-
-### コンテンツ更新
-- 各 wiki リポジトリで `.md` を編集 → commit → push で自動デプロイ
-- changelog.md / README.md の更新履歴を最新化（windrose は `[wiki]` プレフィックスで自動生成）
-
-### 新しいゲーム wiki を追加する場合
-1. 新リポジトリ作成（`<game>-jp/<game>-jp.github.io`）
-2. mdBook 構築（`D:/Code/game-wiki/CLAUDE.md` の手順参照）
-3. `theme/head.hbs` に AdSense スクリプトと canonical / OGP 追加
-4. `ads.txt` 配置
-5. apex の `index.html` にカード追加
-6. Cloudflare で CNAME 追加
-7. AdSense 管理画面で「サブドメインを追加」（または apex 承認の継承確認）
-
-### 収益が想定より低い場合
-- 自動広告だけだと配置が最適でない場合あり → 手動広告ユニットを記事内に挿入を検討
-- Google AdSense ヘルプ「広告配置の最適化」参照
+- [Google 公式: AdSense サイトURL登録](https://support.google.com/adsense/answer/2784438?hl=ja)
+- [Google 公式: ads.txt FAQ](https://support.google.com/adsense/answer/9785052?hl=ja)
+- [stackedbuddy: AdSense Approval 2025 9-Step Checklist](https://www.stackedbuddy.com/google-adsense-approval-2025-9-step-checklist/)
+- [theguidex: AdSense Approval 2026](https://theguidex.com/google-adsense-approval/)
+- [trulyspeaks: Real Low Value Content Fix 2025](https://www.trulyspeaks.com/2025/11/adsense-low-value-content-fix.html)
+- [zenn beachone: 有用性の低いコンテンツ審査対応 2025](https://zenn.dev/beachone1155/articles/20251101-adsense-low-value-content-fix)
+- [squarearth: 10回落ちた人の合格秘訣](https://squarearth.shop/google%E3%82%A2%E3%83%89%E3%82%BB%E3%83%B3%E3%82%B9%E5%90%88%E6%A0%BC%E7%A7%98%E8%A8%A3/)
+- [Strategy by ipe: サブドメインAdSense](https://ipeinc.jp/media/sub-domain-adsense/)
+- [digitalapplied: Scaled Content Abuse March 2026](https://www.digitalapplied.com/blog/scaled-content-abuse-google-march-update-ai-pages-decimated)
+- [GitHub Pages AdSense 合格事例](https://sonotato6.github.io/github-pages-adsense/)
 
 ---
 
-## 付録: 関連リンク
+## 9. 関連リンク
 
 - AdSense 管理画面: https://www.google.com/adsense/
 - Search Console: https://search.google.com/search-console
 - Cloudflare 管理画面: https://dash.cloudflare.com/
 - GitHub Pages 設定: 各リポジトリの Settings > Pages
+- Google Search Central: AI 生成コンテンツについて https://developers.google.com/search/blog/2023/02/google-search-and-ai-content
