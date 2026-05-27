@@ -1,14 +1,30 @@
 # GameGuide JP AdSense 運用ランブック
 
-**作成: 2026-05-17 / 想定 Claude 停止: 2026-05-24**
+**作成: 2026-05-17 / 更新: 2026-05-17（不承認→再申請準備中） / 想定 Claude 停止: 2026-05-24**
 
 5/24 以降、Claude 支援なしで AdSense 承認・不承認・運用変更に対応できることを目的としたランブック。
 
 ---
 
+## ⚠️ 申請履歴
+
+| 日付 | アクション | 結果 |
+|---|---|---|
+| 2026-05-17 | 初回申請 | **不承認**（理由: 有用性の低いコンテンツ） |
+| 2026-05-17 | apex に独自記事3本追加、コンテンツサイト化 | デプロイ完了 |
+| 2026-05-22〜24 | 再申請ボタン押下（インデックス再促進後） | 結果待ち |
+
+不承認時に追加した記事:
+- `/articles/windrose-early-pitfalls.html`
+- `/articles/survival-ship-games-comparison.html`
+- `/articles/why-no-japanese-wiki.html`
+- `/articles/index.html`（一覧ハブ）
+
+---
+
 ## TL;DR — 現在の状態（2026-05-17 時点）
 
-- **AdSense 申請: 完了・審査中**（pub-9726522155839126 を使用 / staypdf.com と同じアカウント）
+- **AdSense 申請: 1回不承認 → 再申請準備中**（pub-9726522155839126 を使用 / staypdf.com と同じアカウント）
 - **申請ドメイン: gameguidejp.com（apex）**
 - **公開サブドメイン: windrose.gameguidejp.com のみ**（dragonkin / everwind は noindex+robots Disallow で一時非公開）
 - **CMP（同意管理）設定: 完了**（3択型: 同意する / 同意しない / オプションを管理する）
@@ -17,9 +33,22 @@
 
 | 日付目安 | やること |
 |---|---|
-| 5/17〜23 | 審査待ち。毎日 AdSense 管理画面・登録メール確認 |
-| 5/24 まで | 承認: ✅ 自動配信開始 / 不承認: 理由メール保存 |
-| 5/24 後 | Claude なしで承認/不承認対応 |
+| 5/17〜21 | Google 再クロール待ち。Search Console で /articles/ 配下を URL 検査・インデックスリクエスト |
+| 5/22 | AdSense 管理画面で「審査をリクエスト」ボタン押下 |
+| 5/22〜24 | 審査待ち |
+| 5/24 後 | Claude なしで承認/不承認対応（再不承認時はランブックの「不承認だった場合の対応」参照） |
+
+### 5/22 までに必ずやること
+
+1. **Search Console で URL 検査・インデックスリクエスト**:
+   - `https://gameguidejp.com/`
+   - `https://gameguidejp.com/articles/`
+   - `https://gameguidejp.com/articles/windrose-early-pitfalls.html`
+   - `https://gameguidejp.com/articles/survival-ship-games-comparison.html`
+   - `https://gameguidejp.com/articles/why-no-japanese-wiki.html`
+2. **sitemap.xml の再送信**: Search Console > サイトマップ > `sitemap.xml` を入力して送信
+3. **インデックス確認**: 5/21 までに全記事がインデックスされていることを確認
+4. **AdSense 再申請**: 5/22 に管理画面の「審査をリクエスト」
 
 ---
 
