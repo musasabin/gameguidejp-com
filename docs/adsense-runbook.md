@@ -31,7 +31,8 @@
 | 2026-05-17 | 初回申請 | **不承認**（理由: 有用性の低いコンテンツ） |
 | 2026-05-17 | apex に独自記事3本追加、コンテンツサイト化 | デプロイ完了 |
 | 2026-05-27 | apex に独自記事10本追加（計13本）、About 大幅加筆 | デプロイ完了 |
-| **2026-06〜07** | 月8記事ペースで追加運用 | user 単独で実施 |
+| 2026-06-02 | apex に独自記事8本追加（計21本）、Tier 3 引用全削除（research-policy 違反訂正） | デプロイ完了 |
+| **2026-06〜07** | 月4-8記事ペースで追加運用（目標30本超） | user 単独で実施 |
 | **2026-07末** | 2回目の再申請 | 結果待ち |
 
 ---
@@ -41,10 +42,13 @@
 ### apex 配下のコンテンツ
 - ポータルトップ（index.html）：Windrose カード + 解説 + 運営方針 + 最新記事カード
 - About / Privacy / Contact / 404
-- **記事13本**（articles/）
-  - 攻略ガイド（Windrose）: 4本（early-pitfalls / poise-parry / build-philosophy / multiplayer）
-  - ジャンル比較・考察: 4本（survival-ship-comparison / casual-vs-hardcore / soulslike-survival / 2026-survival-ea-trends）
-  - 情報源の使い方・メタ: 5本（why-no-japanese-wiki / fextralife-fandom / discord-guide / slang-glossary / steam-ea-checklist）
+- **記事21本**（articles/）
+  - 攻略ガイド（Windrose）: 8本（early-pitfalls / poise-parry / build-philosophy / multiplayer / ship-types / factions-reputation / crafting-priority / naval-combat-tactics）
+  - ジャンル比較・考察: 6本（survival-ship-comparison / casual-vs-hardcore / soulslike-survival / 2026-survival-ea-trends / enshrouded-vs-valheim / indie-ea-success-patterns）
+  - 情報源の使い方・メタ: 7本（why-no-japanese-wiki / fextralife-fandom / discord-guide / slang-glossary / steam-ea-checklist / reddit-subreddit-patrol / wiki-gg-fandom-migration）
+
+### 重要：Tier 3 サイト引用の禁止
+過去に SEO ファーム系サイト（neonlightsmedia / boostmatch / allthings.how / bisecthosting / mobalytics / skycoach / xmodhub / playerauctions / dropreference / vpesports / method.gg / games.gg / sportskeeda / mein-mmo.de / gameworldobserver 等）を引用してしまい、2026-06-02 に全 9 記事から一括削除した経緯あり。**新規記事執筆時、これらのドメインへの外部リンク・本文言及は絶対に禁止**。Tier 1 のみ使用すること（Steam Community / Reddit / Fextralife / 公式 Discord / wiki.gg / 大手ゲームメディア pcgamer.com / gamespot.com / gameinformer.com / gamerant.com / 4gamer.net / famitsu.com 等）。
 
 ### サブドメイン
 - **windrose**: https://windrose.gameguidejp.com / 70+ ページ（mdBook）/ 公開中
