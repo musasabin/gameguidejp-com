@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Windrose の体幹・パリィシステム解説：ソウルライク戦闘の実際の挙動 - GameGuide JP</title>
-  <meta name="description" content="Windrose（Early Access）の Poise（体幹シールド）、パリィ・Perfect Block の武器制限、スタミナ消費の実挙動を、Steam Community・Fextralife・Tank's Guide を横断して整理。「ガード張りっぱなし」が罠になる理由を構造的に解説。">
+  <meta name="description" content="Windrose（Early Access）の Poise（体幹シールド）、パリィ・Perfect Block の武器制限、スタミナ消費の実挙動を、Steam Community・Fextralife・Tank's Guide を横断して整理。「ガード張りっぱなし」が罠になる理由を仕組みから解説。">
   <link rel="canonical" href="https://gameguidejp.com/articles/windrose-poise-parry-mechanics.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Windrose の体幹・パリィシステム解説：ソウルライク戦闘の実際の挙動">
@@ -65,7 +65,7 @@
         画面下に表示されるタン色のシールドアイコンが Windrose における Poise の本体です。プレイヤーも敵も <strong>2〜3 枚のシールド</strong> を保持していて、これがゼロになった瞬間に「スタガー」状態へ移行し、人間型はよろけ、四足獣は転倒します。スタガー中は<strong>通常の数倍ダメージ</strong>が通るため、ここが事実上のすべての火力源になります。
       </p>
       <p>
-        ここで誤解されがちなのは、シールドは「徐々に削れるゲージ」ではなく「離散的に1枚ずつ落ちる」点です。Heavy Attack で 1 枚削るのに必要なヒット数は武器によって変わりますが、コミュニティ製 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3720663868" rel="noopener">A tank's guide to Windrose</a> によれば、シールド 1 枚は概ね Heavy Attack 2〜3 発分相当。Light Attack はその約 6 割程度の効率しかなく、シールドブレイクを狙うなら Heavy か後述のパリィが基本になります。
+        ここで誤解されがちなのは、シールドは「徐々に削れるゲージ」ではなく「離散的に1枚ずつ落ちる」点です。シールド 1 枚を削るのに必要なヒット数は武器によって変わりますが、コミュニティ製 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3720663868" rel="noopener">A tank's guide to Windrose</a> でも、Heavy Attack のほうが Light Attack より体幹削り効率が明確に高いと共有されています。シールドブレイクを狙うなら Light の連打ではなく、Heavy か後述のパリィを軸にするのが基本です。
       </p>
 
       <h2>パリィは「最強の体幹削り手段」だが武器を選ぶ</h2>
@@ -96,7 +96,7 @@
         <li><strong>赤点滅（Winded）</strong>：スプリント不可・ドッジ不可・回復遅延の三重ペナルティ</li>
       </ul>
       <p>
-        構造的に重要なのは、Winded 状態は「数秒で抜ける軽いデバフ」ではなく、<strong>事実上ボス戦で死亡確定する地雷</strong>だという点です。回避すら使えないため、次の一撃を見てから動くことができなくなります。20〜30% を残した時点で攻撃を止め、距離を取ってから黄ゲージへ戻すのが基本動作です。
+        ここで効いてくるのが、Winded 状態は「数秒で抜ける軽いデバフ」ではなく、<strong>ボス戦では死亡に直結しかねない危険な状態</strong>だという点です。回避すら使えないため、次の一撃を見てから動くことができなくなります。20〜30% を残した時点で攻撃を止め、距離を取ってから黄ゲージへ戻すのが基本動作です。
       </p>
 
       <h3>ブロックの落とし穴：「シールドは消費するがスタミナは消費しない」</h3>
@@ -127,7 +127,7 @@
         </tbody>
       </table>
 
-      <h2>構造的に何が起きているか：3つのリソースの押し付け合い</h2>
+      <h2>戦闘の正体：3つのリソースの押し付け合い</h2>
       <p>
         ここまでをまとめると、Windrose の戦闘は「<strong>HP・スタミナ・Poise シールド</strong>」という3つのリソースを、自分と敵で同時に押し付け合うゲームだと整理できます。
       </p>

@@ -69,9 +69,9 @@
           <tr><th>ステータス</th><th>1pt あたり</th><th>役割</th></tr>
         </thead>
         <tbody>
-          <tr><td>Vitality（VIT）</td><td>+13 HP</td><td>常時：耐久</td></tr>
-          <tr><td>Endurance（END）</td><td>+5 Stamina</td><td>常時：行動量</td></tr>
-          <tr><td>Mastery</td><td>+0.5% クリ率</td><td>常時：火力補助</td></tr>
+          <tr><td>Vitality（VIT）</td><td>最大 HP</td><td>常時：耐久</td></tr>
+          <tr><td>Endurance（END）</td><td>最大スタミナ</td><td>常時：行動量</td></tr>
+          <tr><td>Mastery</td><td>クリティカル率</td><td>常時：火力補助</td></tr>
           <tr><td>Strength（STR）</td><td>重武器ダメージ</td><td>武器別スケール</td></tr>
           <tr><td>Agility（AGI）</td><td>俊敏武器ダメージ</td><td>武器別スケール</td></tr>
           <tr><td>Precision（PRE）</td><td>技巧武器ダメージ</td><td>武器別スケール</td></tr>
@@ -101,18 +101,18 @@
 
       <h2>「全部上げる」が罠になる理由：DPS は乗算で効く</h2>
       <p>
-        万能ビルドが機能しない理由は単純な算数です。Windrose の武器ダメージはスケーリング値が S → A → B と段階的に上がる構造で、PRE を 25 まで振った場合と PRE 10 / AGI 10 / STR 5 に分散した場合では、<strong>主武器の最終火力に倍近い差</strong>が出ます。
+        万能ビルドが機能しない理由は単純な算数です。Windrose の武器ダメージはスケーリング値が S → A → B と段階的に上がる構造で、同じ合計ポイントでも1系統に集中投資した場合と、複数系統へ均等に分散した場合では、<strong>主武器の最終火力に無視できない差</strong>が出ます。分散ビルドは「どの武器を持っても中途半端」になりがちです。
       </p>
       <p>
         さらに見落とされがちなのが、Drake's Pistol の Vulnerability や Rapier of Devastation の Plague Mark のように、<strong>火力バフが乗算で乗る</strong>パッシブが存在することです。基礎ダメージが低いと乗算しても伸びません。コミュニティで広く共有されているビルドガイドが口を揃えて「1 系統に集中」と書くのはこのためです。
       </p>
       <p>
-        構造的に言えば、Windrose は<strong>「火力源を 1 系統に絞り、そこに乗算バフを重ねる」設計</strong>のゲームであり、ステータスはその火力源にチップを全張りするためのリソースです。耐久（VIT）と行動量（END）は最低限で抑え、残りを主武器スケールに集中させるのが理に適っています。
+        つまり Windrose は<strong>「火力源を 1 系統に絞り、そこに乗算バフを重ねる」設計</strong>のゲームであり、ステータスはその火力源にチップを全張りするためのリソースです。耐久（VIT）と行動量（END）は最低限で抑え、残りを主武器スケールに集中させるのが理に適っています。
       </p>
 
       <h2>序盤〜中盤の配分ロードマップ</h2>
       <p>
-        Windrose 攻略 wiki の <a href="https://windrose.gameguidejp.com/character/build-guide.html">ビルド最適化ガイド</a> と Steam Community で共有されている推奨配分を統合すると、レベル帯ごとの目安は次の通り。数値は EA 中で変動するため目安として扱ってください。
+        Windrose 攻略 wiki の <a href="https://windrose.gameguidejp.com/character/build-guide.html">ビルド最適化ガイド</a> と Steam Community で共有されている推奨配分を統合すると、レベル帯ごとの配分は次のように組むと安定します（具体的な振り数はプレイスタイルや装備で前後します）。
       </p>
       <h3>Lv 1〜5：Endurance 先行</h3>
       <p>
@@ -151,12 +151,12 @@
         ステータスポイントを節約できる隠れた手段が消費アイテム系のバフです。
       </p>
       <ul>
-        <li><strong>食事バフ 2 枠</strong>：常時 2 つ埋めて遠征するのが基本。Swamp Pie + Coffee で PRE+20 / END+20 など、ステータスポイント数十回分の効果</li>
-        <li><strong>Rested バフ</strong>：Bonfire 近くで取得。スタミナ回復速度・最大量を大幅に底上げ。デコレーション配置で最大 30 分まで延長</li>
-        <li><strong>Elixir of Cruelty</strong>：+8% ダメージ。ボス前の使い切り</li>
+        <li><strong>食事バフ 2 枠</strong>：常時 2 つ埋めて遠征するのが基本。Swamp Pie + Coffee のように PRE や END を底上げする組み合わせは、ステータスポイント数十回分に相当する効果が得られる</li>
+        <li><strong>Rested バフ</strong>：Bonfire 近くで取得。スタミナ回復速度・最大量を底上げ。拠点のデコレーション配置で持続時間を延長できる</li>
+        <li><strong>Elixir of Cruelty</strong>：ダメージを底上げするエリクサー。ボス前の使い切り</li>
       </ul>
       <p>
-        構造的に言えば、Windrose は<strong>ステータスポイントだけで火力を出すゲームではない</strong>のです。食事 + Rested + エリクサーの 3 層を前提にしたうえで、ステータスは最低ラインを担保する役割に置かれています。これを知らずに「素のステータスだけ」で殴っていると、同レベルのプレイヤーと装備差で 2 倍以上の火力差が生まれます。
+        要するに Windrose は<strong>ステータスポイントだけで火力を出すゲームではない</strong>のです。食事 + Rested + エリクサーの 3 層を前提にしたうえで、ステータスは最低ラインを担保する役割に置かれています。これを知らずに「素のステータスだけ」で殴っていると、同レベルのプレイヤーとの間にバフ運用ぶんの大きな火力差が生まれます。
       </p>
 
       <h2>中盤での切り替えタイミング</h2>
@@ -167,17 +167,12 @@
         切り替えタイミングの判断基準は、(1) Epic 昇格用 Ingot が安定供給されるようになったか、(2) Plague Mark コンボの構成パーツ（Drake's Pistol + Rapier of Devastation）が揃ったか、の 2 点。両方 YES ならフルリスペックを掛けて Plague Mark コンボ型に組み替える価値があります。
       </p>
 
-      <h2>まとめ：万能を諦めると Windrose は急に簡単になる</h2>
-      <ul>
-        <li>ステータスは 6 種で、攻撃力は STR/AGI/PRE の 1 系統にしか効かない</li>
-        <li>万能ビルドは乗算バフが弱く成立しない。1 系統集中が前提</li>
-        <li>リスペック無料を活用し、採取・探索・ボス・Plague でシーン別に振り直す</li>
-        <li>食事 + Rested + エリクサーは「常時前提」のリソース層</li>
-        <li>Epic 昇格期にもう一度ビルドを組み直すのが定石</li>
-      </ul>
-
+      <h2>万能を諦めると Windrose は急に簡単になる</h2>
       <p>
-        Windrose は知らないと「全部中途半端」で詰まりやすいゲームですが、構造を理解すると 1 系統集中 + シーン別リスペックで一気に安定します。戦闘そのものの挙動を理解したい場合は <a href="/articles/windrose-poise-parry-mechanics.html">Windrose の体幹・パリィシステム解説</a> も合わせてどうぞ。武器別の数値・タレント詳細は <a href="https://windrose.gameguidejp.com/">Windrose 日本語攻略まとめ</a> で随時更新しています。
+        ここまでを一本の方針に束ねると、「攻撃力は STR/AGI/PRE のどれか1系統にしか乗らない以上、ステータスはその1系統に集中させ、火力の底上げは食事・Rested・エリクサーの3層に任せる」という形になります。そして Windrose のリスペックは無料・無制限なので、採取・探索・ボス・Plague ゾーンといった場面ごとに振り直すのが前提の設計です。Epic 昇格（Ascension）でパッシブ前提のビルドが組めるようになったタイミングが、もう一度全体を見直す節目になります。
+      </p>
+      <p>
+        Windrose は知らないと「全部中途半端」で詰まりやすいゲームですが、1 系統集中とシーン別リスペックを身につけると一気に安定します。戦闘そのものの挙動を理解したい場合は <a href="/articles/windrose-poise-parry-mechanics.html">Windrose の体幹・パリィシステム解説</a> も合わせてどうぞ。武器別の数値・タレント詳細は <a href="https://windrose.gameguidejp.com/">Windrose 日本語攻略まとめ</a> で随時更新しています。
       </p>
 
       <h2>参考情報源（Tier 1）</h2>
