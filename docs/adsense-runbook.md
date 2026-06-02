@@ -32,8 +32,29 @@
 | 2026-05-17 | apex に独自記事3本追加、コンテンツサイト化 | デプロイ完了 |
 | 2026-05-27 | apex に独自記事10本追加（計13本）、About 大幅加筆 | デプロイ完了 |
 | 2026-06-02 | apex に独自記事8本追加（計21本）、Tier 3 引用全削除（research-policy 違反訂正） | デプロイ完了 |
-| **2026-06〜07** | 月4-8記事ペースで追加運用（目標30本超） | user 単独で実施 |
-| **2026-07末** | 2回目の再申請 | 結果待ち |
+| 2026-06-02 | **方針転換: 量より質**。3調査（技術監査・辛口レビュー・年齢以外要因）に基づき 21→15本に精錬。薄い記事削除・情報源系統合・AI定型句排除・ハルシネーション数値ぼかし | デプロイ完了 |
+| **2026-06〜07** | 質維持で記事を慎重に追加。同日大量公開は避ける（scaled abuse シグナル） | user 単独で実施 |
+| **2026-07-20以降** | ドメイン3ヶ月到達後に2回目の再申請 | 結果待ち |
+
+### ドメイン年齢の確定情報（RDAP 確認済み）
+- **登録日: 2026-04-20**（RDAP で確認、推定ではない）
+- ドメイン3ヶ月到達: **2026-07-20**
+- ただし年齢は決定要因ではない（Google 公式に最低期間規定なし）。質が主因。
+
+### 2026-06-02 精錬後の最終構成（15本）
+- 攻略ガイド（Windrose）8本
+- ジャンル比較・考察4本（casual-vs-hardcore / soulslike / enshrouded-vs-valheim / indie-ea-success）
+- 情報源・購入判断3本（fextralife-fandom-wiki-guide / foreign-game-community-guide / steam-ea-checklist）
+
+### 削除・統合の記録（復活させないこと）
+- 削除: 2026-survival-ea-trends（鮮度依存）/ survival-ship-games-comparison（薄い）/ why-no-japanese-wiki（自己PR・攻略価値薄）
+- 統合: fextralife-fandom-wiki-guide ← wiki-gg-fandom-migration-trend / foreign-game-community-guide ← reddit-subreddit-patrol + foreign-game-discord-guide + foreign-game-slang-glossary
+
+### 辛口レビューで判明した「やってはいけないこと」
+- **同日に大量記事を公開しない**（scaled content abuse のシグナル）
+- AI 定型句（「独自視点として」「構造的に言えば」「まとめ：3原則」）を使わない
+- EA 初期ゲームの具体数値（船HP・リロード秒数等）を裏取りなしで断定しない
+- テーマだけ変えた薄い汎用記事を量産しない
 
 ---
 
