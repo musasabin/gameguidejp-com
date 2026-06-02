@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fextralife / Fandom Wiki を海外ゲーム攻略情報源として使う実践ガイド - GameGuide JP</title>
-  <meta name="description" content="海外ゲームの攻略 Wiki として広く使われる Fextralife と Fandom（旧 Gamepedia）の構造的な違い、情報の鮮度を見分ける方法、誤情報パターンを Dragonkin / Windrose / Enshrouded の実例とあわせて整理。">
+  <title>海外ゲーム Wiki の歩き方：Fextralife / Fandom / wiki.gg の違いと鮮度の見抜き方 - GameGuide JP</title>
+  <meta name="description" content="海外ゲーム攻略の主要 Wiki である Fextralife・Fandom・wiki.gg の構造的な違い、Fandom から wiki.gg への移行トレンドとその背景、情報の鮮度を見分けるチェックポイント、誤情報の典型パターンを Dragonkin / Windrose / Enshrouded の実例で整理。">
   <link rel="canonical" href="https://gameguidejp.com/articles/fextralife-fandom-wiki-guide.html">
-  <meta property="og:title" content="Fextralife / Fandom Wiki を海外ゲーム攻略情報源として使う実践ガイド">
-  <meta property="og:description" content="Fextralife と Fandom Wiki の構造的な違い、情報の鮮度を見分ける方法、誤情報パターンを実例とあわせて整理。">
+  <meta property="og:title" content="海外ゲーム Wiki の歩き方：Fextralife / Fandom / wiki.gg の違いと鮮度の見抜き方">
+  <meta property="og:description" content="3大 Wiki プラットフォームの違い、Fandom から wiki.gg への移行トレンド、情報の鮮度を見分ける方法、誤情報パターンを実例とあわせて整理。">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://gameguidejp.com/articles/fextralife-fandom-wiki-guide.html">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9726522155839126"
@@ -20,9 +20,9 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Fextralife / Fandom Wiki を海外ゲーム攻略情報源として使う実践ガイド",
+    "headline": "海外ゲーム Wiki の歩き方：Fextralife / Fandom / wiki.gg の違いと鮮度の見抜き方",
     "datePublished": "2026-05-27",
-    "dateModified": "2026-05-27",
+    "dateModified": "2026-06-02",
     "inLanguage": "ja",
     "publisher": {
       "@type": "Organization",
@@ -49,98 +49,135 @@
   <main class="article-main">
     <article class="article-body">
       <nav class="breadcrumb">
-        <a href="/">トップ</a> ＞ <a href="/articles/">記事一覧</a> ＞ Fextralife / Fandom Wiki 実践ガイド
+        <a href="/">トップ</a> ＞ <a href="/articles/">記事一覧</a> ＞ 海外ゲーム Wiki の歩き方
       </nav>
 
-      <h1>Fextralife / Fandom Wiki を海外ゲーム攻略情報源として使う実践ガイド</h1>
-      <p class="article-meta">2026-05-27 公開 / 情報源の使い方</p>
+      <h1>海外ゲーム Wiki の歩き方：Fextralife / Fandom / wiki.gg の違いと鮮度の見抜き方</h1>
+      <p class="article-meta">2026-05-27 公開 / 2026-06-02 更新 / 情報源の使い方</p>
 
       <p class="lead">
-        海外ゲームの攻略を調べると、検索結果の上位はほぼ Fextralife か Fandom（旧 Gamepedia / Wikia）のどちらかが占めます。どちらもコミュニティ編集型 Wiki ですが、運営母体・編集ポリシー・広告ポリシー・更新スピードがまったく異なり、同じ「Wiki」として扱うと事故が起きます。本記事では両者の構造的な違いを整理し、情報の鮮度を見分けるチェックポイントと、Dragonkin / Windrose / Enshrouded で実際に問題になりやすい誤情報パターンをまとめます。
+        海外ゲームの攻略を検索すると、上位に並ぶのはほぼ Fextralife・Fandom・wiki.gg のいずれかです。どれもコミュニティ編集型 Wiki ですが、運営母体・編集ポリシー・広告の量・更新スピードがまったく違い、同じ「Wiki」として扱うと事故が起きます。さらに近年は Fandom から wiki.gg へ主要 Wiki が移る動きが進み、「同じゲームの Wiki が2つあって内容が食い違う」状況が常態化しました。本記事では3大プラットフォームの構造的な違いを整理し、移行トレンドの背景、情報の鮮度を見分けるチェックポイント、Dragonkin / Windrose / Enshrouded で実際に問題になりやすい誤情報パターンまでをまとめます。
       </p>
 
-      <h2>1. Fextralife Wiki の特徴：単一ホスト・広告重・コミュニティ編集</h2>
+      <h2>1. 3大プラットフォームの性格の違い</h2>
       <p>
-        Fextralife は <code>wiki.fextralife.com</code> ドメイン配下にゲームごとのサブ Wiki（例：<code>windrose.wiki.fextralife.com</code>）を構える、フランチャイズ型の Wiki プラットフォームです。Soulsborne 系のタイトルから始まり、現在は Elden Ring・Baldur's Gate 3・Diablo IV など大型 RPG の Wiki も抱えます。
-      </p>
-      <p>
-        構造的な特徴は3つあります。第一に、<strong>各 Wiki の管理者（モデレーター）が固定されており、編集権限と質のばらつきが少ない</strong>こと。荒らされたページは比較的早く差し戻されます。第二に、<strong>ページ下部にコメント欄（Disqus 系）があり、ユーザー検証が活発</strong>であること。本文が古くてもコメントで「最新パッチでは違う」と補足されている事例が多く、コメント欄まで読む価値があります。第三に、<strong>広告が非常に多い</strong>こと。動画広告・サイドバーバナー・記事内バナーが重なり、モバイル閲覧では本文がほぼ見えないこともあります。Wiki トップに「Become a VIP」と広告非表示プランへの導線が出ているのは、運営側も広告過多を認識している証拠です。
-      </p>
-      <p>
-        実用面で重要なのは、<strong>各ページ最下部に "Last edit" の編集日付が表示される</strong>仕様です。Windrose Wiki のトップページでも本記事執筆時点で最終編集日が記載されていました。情報の信頼性を判断するときは、まずこの編集日と現行パッチの日付を見比べる癖をつけると事故が減ります。
+        まず大枠を押さえます。Fextralife・Fandom・wiki.gg は得意ジャンルも編集文化も別物で、同じ温度感で読むと判断を誤ります。
       </p>
 
-      <h2>2. Fandom Wiki の特徴：巨大プラットフォーム・質バラバラ・古い情報残りやすい</h2>
+      <h3>Fextralife：単一ホスト・広告重・コメント検証が活発</h3>
       <p>
-        Fandom は Wikipedia の創設者 Jimmy Wales らが立ち上げた Wikia を前身とする巨大ホスティングで、ゲーム以外にもアニメ・映画・コミックまで含めて50万を超えるコミュニティを抱えます。Enshrouded・Palworld・Valheim など、Fextralife に対応 Wiki が無いタイトルはほぼ Fandom 側に集約されます。
+        Fextralife は <code>wiki.fextralife.com</code> 配下にゲームごとのサブ Wiki（例：<code>windrose.wiki.fextralife.com</code>）を構えるフランチャイズ型のプラットフォームです。Soulsborne 系から始まり、現在は Elden Ring・Baldur's Gate 3・Diablo IV など大型 RPG の Wiki も抱えます。
       </p>
       <p>
-        構造的な弱点は、<strong>編集者の質と熱量がゲームごとに大きく異なる</strong>ことです。コアコミュニティが活発なタイトル（例：Terraria Wiki）は Wikipedia 並みの精度を維持しますが、リリース直後の盛り上がりに作られて以降ほぼ放置された Wiki も無数にあります。リリース直後のベータ版・Early Access 期間に書かれた数値が、正式版でこっそり変更されたまま残るパターンは Fandom で特に多発します。
-      </p>
-      <p>
-        もうひとつの問題は<strong>サブドメインが乱立しやすい</strong>こと。同じゲームに対して「公式コミュニティ Wiki」「ファン Wiki」「言語別 Wiki」が並立し、どれが現役か判断しづらい状況になります。近年は Fandom のポリシーへの反発から <code>wiki.gg</code> という代替ホスティングに移行するコミュニティも増えており、Enshrouded も公式 Wiki は wiki.gg 側（<code>enshrouded.wiki.gg</code>）に存在します。Fandom 側だけ見て古い情報を掴むのは典型的な事故パターンです。
+        性格を決める特徴は3つあります。第一に、<strong>各 Wiki の管理者（モデレーター）が固定されており、編集の質のばらつきが少ない</strong>こと。荒らされたページは比較的早く差し戻されます。第二に、<strong>ページ下部のコメント欄（Disqus 系）でユーザー検証が活発</strong>なこと。本文が古くてもコメント欄で「最新パッチでは違う」と補足されている事例が多く、本文だけでなくコメントまで読む価値があります。第三に、<strong>広告が非常に多い</strong>こと。動画広告・サイドバーバナー・記事内バナーが重なり、モバイルでは本文がほぼ見えないこともあります。Wiki トップに「Become a VIP」と広告非表示プランへの導線が出ているのは、運営側も広告過多を認識している裏返しです。実用上は、各ページ最下部に表示される "Last edit" の編集日付を現行パッチの日付と見比べる習慣をつけると事故が減ります。
       </p>
 
-      <h2>3. なぜ ad blocker が事実上必須なのか</h2>
+      <h3>Fandom：巨大プラットフォーム・質バラバラ・古い情報が残りやすい</h3>
       <p>
-        広告ブロッカーの利用是非には議論がありますが、Fextralife / Fandom に限って言えば<strong>実用上ほぼ必須</strong>です。理由は単純で、広告のレイヤーが厚すぎて本文の読解そのものが阻害されるからです。特にモバイルでは、スクロールに追従するバナー・フローティングプレイヤー・記事中央に挿入されるネイティブ広告が重なり、表組みのセル位置がずれて読めなくなることもあります。
+        Fandom（旧 Wikia）は2004年創業の Wiki ホスティングで、Wikipedia の創設者 Jimmy Wales らによって始められました。2018年には Twitch から Curse Media（Gamepedia を含む）を買収し、2021年半ばまでに Gamepedia 上の Wiki を順次 Fandom ドメインへ統合、ゲーム Wiki 市場でほぼ独占的な立場を築きました。アニメ・映画・コミックまで含め非常に多くのコミュニティを抱えます。
       </p>
       <p>
-        当然ながら広告は Wiki 運営の収入源なので、可能なら Fextralife の VIP プランや Fandom の Pro Membership を購入する、あるいは普段使いするゲームの Wiki だけホワイトリストに入れるといった「対価を払う設計」が望ましい姿です。少なくとも記事執筆者側としては「広告まみれで読めないから情報を見落とした」という言い訳が成立しない情報源だと考えるべきでしょう。
+        構造的な弱点は、<strong>編集者の質と熱量がゲームごとに大きく異なる</strong>ことです。コアコミュニティが活発なタイトルは高い精度を維持しますが、リリース直後の盛り上がりで作られて以降ほぼ放置された Wiki も無数にあります。とくに Early Access・ベータ期間に書かれた数値が正式版でこっそり変更されたまま残るパターンは、Fandom で多発します。さらに同じゲームに「公式コミュニティ Wiki」「ファン Wiki」「言語別 Wiki」が並立し、どれが現役か判断しづらくなりがちです。
       </p>
 
-      <h2>4. 情報の鮮度を見分ける3つのチェックポイント</h2>
+      <h3>wiki.gg：Gamepedia 文化を継ぐ移行先・自治を残す軽量ホスト</h3>
       <p>
-        Wiki 情報を「現行パッチで通用するか」を判断するには、以下3点を機械的にチェックする習慣をつけます。
+        wiki.gg は MediaWiki ベースの Wiki ホスティングで、スタッフには Curse / Gamepedia の開発に関わっていた人々が含まれます。いわば「Fandom 統合前の Gamepedia 文化を継承するプラットフォーム」として再構築された格好です。トップページが掲げる原則は明快で、「エディターを最優先する」「退出時に競争しない（＝ Wiki が他プラットフォームへ移るのを妨害しない）」を明示しています。広告は表示されますが Fandom より明らかに控えめで、レイアウト・CSS の自由度はコミュニティ側に残されています。2026年6月時点で800を超える Wiki をホストし、Terraria・Deep Rock Galactic・Dead Cells・ARK などの主要タイトルを含みます（wiki.gg トップページ記載）。Enshrouded の公式 Wiki も wiki.gg 側（<code>enshrouded.wiki.gg</code>）にあります。
+      </p>
+
+      <h2>2. Fandom から wiki.gg への移行トレンドとその背景</h2>
+      <p>
+        2022年以降、主要なゲーム Wiki が Fandom から離脱して wiki.gg へ移る動きが目立つようになりました。コミュニティ側が Fandom に挙げてきた不満は、おおむね3点に集約されます。
       </p>
       <ul>
-        <li><strong>ページ末尾の編集日付</strong>：直近のメジャーパッチより古い場合は数値情報を疑う</li>
-        <li><strong>本文中のパッチ番号への言及</strong>：「As of Patch X.Y」と書かれているか。書かれていない数値は最新版で変わっている可能性を常に考慮する</li>
-        <li><strong>コメント欄の警告</strong>：Fextralife のページ下部コメント欄に「This is outdated」「Nerfed in X.Y」と書かれていれば、それが事実上の最新情報</li>
+        <li><strong>広告過多と UX 劣化</strong>：自動再生動画広告・ポップアップ・ページ間に大量に挟まれるバナーで、モバイルブラウザのラグやクラッシュが頻発する。</li>
+        <li><strong>統一レイアウト強制による自治の縮小</strong>：Fandom が全 Wiki に共通レイアウトを適用し、各コミュニティが積み上げてきた独自 CSS・テンプレートが失われたケースがある。</li>
+        <li><strong>透明性への不満</strong>：機能追加やポリシー変更が事前告知なく実装され、モデレーターのフィードバックが反映されにくいという声。</li>
+      </ul>
+      <p>
+        移行が確認できる主なタイトルとしては、Zelda Wiki・Terraria Wiki（2022年）、Minecraft Wiki・Fallout Wiki・Hollow Knight Wiki（2023年）、League of Legends Wiki・Destiny Wiki（2024年）、Warframe Wiki・Vampire Survivors Wiki（2025年）などが挙がります。Enshrouded のように<strong>最初から wiki.gg 上で「公式 Wiki」として開設</strong>された例もあります（<code>enshrouded.wiki.gg/wiki/Enshrouded_Wiki:About</code>）。
+      </p>
+      <p>
+        ここで攻略情報源として厄介なのが、<strong>コミュニティが離脱しても Fandom 側の Wiki は削除されない</strong>点です。Fandom は旧 Wiki のコンテンツを保持し、新規エディターを募って Wiki を維持しようとします。結果として、本体（オリジナルのモデレーター・主要エディター）は wiki.gg に移ったのに、検索エンジン上では古い Fandom 版が SEO 上位に居座る、というねじれが長期にわたって続きます。「公式が wiki.gg にあるのに検索トップは Fandom 側」という状態は、Enshrouded に限らず広く見られます。
+      </p>
+      <p>
+        この移行は単なる「広告が嫌だ」という話に留まりません。2010年代は「広告収益の規模化＝プラットフォームの中央集権化」という方向に進み、Wikia → Fandom の拡大、Twitch による Curse 買収、Gamepedia 統合がその流れでした。2022年以降の wiki.gg への移行は、その揺り戻しとして読めます。ゲーム Wiki という公共財の運営主権が、プラットフォーム企業からコミュニティへ戻りつつある現象だと捉えておくと、「なぜ同じゲームの Wiki が2つあり、どちらを信じるべきか」の判断が速くなります。
+      </p>
+
+      <h2>3. どの Wiki を優先して引くか：実務手順</h2>
+      <p>
+        海外ゲームの Wiki を参照するときは、次の順で当たると古い情報を踏みにくくなります。
+      </p>
+      <ol>
+        <li><strong>ゲーム名 + "wiki.gg" でまず検索</strong>。存在すれば、ほぼ確実にそちらが現役の公式 Wiki。</li>
+        <li>wiki.gg 版が無い場合のみ Fandom 版を参照する。読むときは、サイドバーや About ページに「This wiki has moved to ○○.wiki.gg」の通知が貼られていないか確認する。</li>
+        <li>ソウルライク・ARPG 系は Fextralife 版が充実していることが多い。コメント欄まで読む。</li>
+        <li>「最終更新日」「Recent Changes」を見て、半年以上更新が止まっている Wiki は内容が古い前提で読む。</li>
+        <li>どれが現役か判断に迷うときは公式 Discord で「Which wiki is the official one?」と聞けば、モデレーターまたは開発者からほぼ確実に正解が返る。</li>
+      </ol>
+
+      <h2>4. 情報の鮮度を見分けるチェックポイント</h2>
+      <p>
+        Wiki の記述が「現行パッチで通用するか」を判断するには、プラットフォームを問わず次を機械的に確認します。
+      </p>
+      <ul>
+        <li><strong>ページ末尾の編集日付</strong>：直近のメジャーパッチより古ければ、数値情報を疑う。</li>
+        <li><strong>本文中のパッチ番号への言及</strong>：「As of Patch X.Y」と書かれているか。書かれていない数値は最新版で変わっている可能性を常に考慮する。</li>
+        <li><strong>コメント欄・Talk ページの警告</strong>：Fextralife のページ下部コメント欄に「This is outdated」「Nerfed in X.Y」とあれば、それが事実上の最新情報。</li>
+      </ul>
+      <p>
+        移行済み Wiki の Fandom 版を間違って踏んだときは、次のシグナルで「古い情報」を察知できます。これらは Fextralife を含む他プラットフォームでも使える生存判定です。
+      </p>
+      <ul>
+        <li>パッチノートのページが直近半年ぶん抜けている</li>
+        <li>新規追加されたボス・アイテム・バイオームが存在しない</li>
+        <li>Talk ページや Recent Changes が bot 投稿だけになっている</li>
+        <li>「Last updated」「Verified on patch X.Y」が古いバージョン番号で止まっている</li>
+        <li>サイドバーのアクティブエディター数が極端に少ない</li>
       </ul>
 
       <h2>5. 誤情報の典型パターン：ベータ時代の名残・誤訳・未実装フラグ</h2>
       <p>
-        Wiki 系で混入しやすい誤情報には決まった型があります。
+        Wiki に混入しやすい誤情報には決まった型があります。
       </p>
       <p>
-        <strong>パターン1：ベータ・Early Access 時代の数値の残骸</strong>。Dragonkin: The Banished のように Early Access から正式版に移行したタイトルでは、EA 期間中のスキルツリー・ダメージ係数・ドロップ率が正式版で大幅に再調整されることがあります。Wiki 側がパッチ追従しきれず、古い数値が残ったままになるケースが定番です。
+        <strong>パターン1：ベータ・Early Access 時代の数値の残骸</strong>。Dragonkin: The Banished のように Early Access から正式版へ移行したタイトルでは、EA 期間中のスキルツリー・ダメージ係数・ドロップ率が正式版で大幅に再調整されることがあります。Wiki がパッチ追従しきれず古い数値が残るのは定番です。
       </p>
       <p>
-        <strong>パターン2：英中翻訳の誤訳</strong>。Windrose のような中国系スタジオのタイトルでは、原文が中国語 → 英語 Wiki に翻訳される過程で、アイテム名やスキル説明の意味がずれる事例があります。「効果A」が「効果A "or" 効果B」と訳されているのか「効果A "and" 効果B」が正しいのか、Wiki だけでは判断できないことがあります。
+        <strong>パターン2：英中翻訳の誤訳</strong>。Windrose のような中国系スタジオのタイトルでは、原文（中国語）→ 英語 Wiki に翻訳される過程でアイテム名やスキル説明の意味がずれる事例があります。「効果A "or" 効果B」なのか「効果A "and" 効果B」が正しいのか、Wiki だけでは判断できないことがあります。
       </p>
       <p>
-        <strong>パターン3：未実装コンテンツのページ化</strong>。データマイニングで判明したが未実装の武器・敵・エリアがページ化され、「実装済み」と誤読されることがあります。「Datamined」「Unreleased」「Planned」といったタグの有無を必ず確認します。
-      </p>
-
-      <h2>6. 補完手段：Steam Community / Reddit との突合</h2>
-      <p>
-        Wiki の数値が怪しいと感じた場合、最も信頼できる突合先は Steam Community のディスカッションと Reddit のサブレディットです。Wiki がパッチ追従に遅れていても、コミュニティ側は数時間〜数日でパッチノートに対する検証スレッドが立ちます。
-      </p>
-      <p>
-        具体的な手順としては、「アイテム名 / 敵名 + patch + 数値」のような英語クエリで Steam Discussion と Reddit を検索し、直近1ヶ月以内に投稿されたスレッドが Wiki と異なる数値を挙げていないかを確認します。Reddit は<code>site:reddit.com</code>を Google 検索に付けると時系列でフィルタしやすくなります。Wiki ＋ Reddit ＋ Steam の三点測量を癖にすると、誤情報を踏む確率は大きく下がります。
+        <strong>パターン3：未実装コンテンツのページ化</strong>。データマイニングで判明したが未実装の武器・敵・エリアがページ化され、「実装済み」と誤読されることがあります。「Datamined」「Unreleased」「Planned」タグの有無を必ず確認します。
       </p>
 
-      <h2>独自視点：Wiki だけ見て攻略する罠</h2>
+      <h2>6. 補完手段：Steam Community / Reddit / Discord との突合</h2>
       <p>
-        Wiki は「最終的な事実」ではなく「コミュニティが今この時点で合意していると思っている事実」を反映しているに過ぎません。特に Early Access 中の現行パッチが速いゲームでは、Wiki は構造的に常に半歩遅れます。にもかかわらず、Wiki を「教科書」として扱う読者が多いことが、誤情報の連鎖を加速させています。
+        Wiki の数値が怪しいと感じたら、最も信頼できる突合先は Steam Community のディスカッションと Reddit のサブレディットです。Wiki がパッチ追従に遅れていても、コミュニティ側は数時間〜数日でパッチノートへの検証スレッドを立てます。「アイテム名 / 敵名 + patch + 数値」のような英語クエリで Steam Discussion と Reddit を検索し、直近1ヶ月以内のスレッドが Wiki と異なる数値を挙げていないかを確認します。Reddit は <code>site:reddit.com</code> を Google 検索に付けると時系列でフィルタしやすくなります。Wiki ＋ Reddit ＋ Steam の三点測量を癖にすると、誤情報を踏む確率は大きく下がります。
       </p>
       <p>
-        構造的な対策は2つしかありません。第一に、<strong>Wiki の編集日付とパッチ日付を常に並べて見る</strong>こと。第二に、<strong>Wiki に書かれた数値はすべて「最終更新時点の値」だと割り切り、現行パッチで通用するかは Reddit / Discord / Steam で確認する</strong>こと。GameGuide JP の各 wiki でも、数値情報には可能な限り検証日付とパッチ番号を併記する方針で運用しています。情報源を Wiki 一本に頼らない構えが、結局のところ最も安全です。
+        Wiki は「最終的な事実」ではなく「コミュニティが今この時点で合意していると思っている事実」を反映しているに過ぎません。とくに Early Access で現行パッチが速いゲームでは、Wiki は構造的に常に半歩遅れます。書かれた数値はすべて「最終更新時点の値」だと割り切り、現行パッチで通用するかは Reddit / Discord / Steam で確認する。GameGuide JP の各 wiki でも、数値情報には可能な限り検証日付とパッチ番号を併記する方針で運用しています。
       </p>
 
       <p>
-        Wiki 以外の情報源として公式 Discord の扱いについては、<a href="/articles/foreign-game-discord-guide.html">海外ゲームの公式 Discord で情報を集める具体的手順</a>でまとめています。日本語攻略情報が薄い背景については <a href="/articles/why-no-japanese-wiki.html">海外 EA ゲームの日本語攻略情報が薄い本当の理由</a> もあわせてご覧ください。
+        Wiki 以外の情報源の実践的な集め方は <a href="/articles/foreign-game-community-guide.html">海外ゲームコミュニティから攻略情報を集める実践ガイド（Reddit・Discord・略語）</a> にまとめています。日本語攻略情報が薄い背景については <a href="/articles/why-no-japanese-wiki.html">海外 EA ゲームの日本語攻略情報が薄い本当の理由</a> もあわせてご覧ください。
       </p>
 
       <h2>参考情報源（Tier 1）</h2>
       <ul class="sources">
         <li><a href="https://windrose.wiki.fextralife.com/Windrose+Wiki" rel="noopener">Fextralife Windrose Wiki（編集日付・カテゴリ構成の参照元）</a></li>
-        <li><a href="https://enshrouded.wiki.gg/" rel="noopener">The Official Enshrouded Wiki（wiki.gg）</a></li>
+        <li><a href="https://wiki.gg/" rel="noopener">wiki.gg トップページ（運営方針・ホスト wiki 数）</a></li>
+        <li><a href="https://enshrouded.wiki.gg/" rel="noopener">The Official Enshrouded Wiki（wiki.gg 上の公式 Wiki）</a></li>
+        <li><a href="https://enshrouded.wiki.gg/wiki/Enshrouded_Wiki:About" rel="noopener">Enshrouded Wiki:About（wiki.gg 上で開設）</a></li>
         <li><a href="https://enshrouded.wiki.gg/wiki/Game_Updates" rel="noopener">Enshrouded Game Updates（公式 Wiki 側パッチ履歴）</a></li>
+        <li><a href="https://terraria.wiki.gg/" rel="noopener">Official Terraria Wiki（wiki.gg）</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Curse_LLC" rel="noopener">Wikipedia - Curse LLC（Gamepedia から Fandom への統合経緯）</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Fandom_(website)" rel="noopener">Wikipedia - Fandom (website)</a></li>
         <li><a href="https://steamcommunity.com/app/3041230/" rel="noopener">Steam Community: Windrose（コミュニティ検証の主戦場）</a></li>
         <li><a href="https://store.steampowered.com/app/1203620/Enshrouded/" rel="noopener">Steam ストアページ: Enshrouded（公式コミュニティリンク一覧）</a></li>
       </ul>
+      <p class="article-meta" style="margin-top:1rem;">
+        注：移行年の一覧は2026年6月時点で確認できた公開情報を集約したものです。個別 Wiki の移行日付は公式アナウンスにあたって確認してください。
+      </p>
 
       <p class="article-foot">
         <a href="/articles/">← 記事一覧へ戻る</a>
