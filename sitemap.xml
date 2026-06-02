@@ -17,30 +17,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gameguidejp.com/articles/survival-ship-games-comparison.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gameguidejp.com/articles/why-no-japanese-wiki.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gameguidejp.com/articles/windrose-multiplayer-pitfalls.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gameguidejp.com/articles/steam-early-access-checklist.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://gameguidejp.com/articles/windrose-poise-parry-mechanics.html</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -53,49 +29,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gameguidejp.com/articles/fextralife-fandom-wiki-guide.html</loc>
+    <loc>https://gameguidejp.com/articles/windrose-multiplayer-pitfalls.html</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gameguidejp.com/articles/foreign-game-discord-guide.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gameguidejp.com/articles/casual-vs-hardcore-survival.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gameguidejp.com/articles/soulslike-survival-trend.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gameguidejp.com/articles/2026-survival-ea-trends.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gameguidejp.com/articles/foreign-game-slang-glossary.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gameguidejp.com/articles/enshrouded-vs-valheim-design-comparison.html</loc>
+    <loc>https://gameguidejp.com/articles/windrose-ship-types-guide.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gameguidejp.com/articles/indie-ea-success-patterns.html</loc>
+    <loc>https://gameguidejp.com/articles/windrose-factions-reputation.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -113,36 +59,59 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gameguidejp.com/articles/windrose-ship-types-guide.html</loc>
+    <loc>https://gameguidejp.com/articles/casual-vs-hardcore-survival.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gameguidejp.com/articles/windrose-factions-reputation.html</loc>
+    <loc>https://gameguidejp.com/articles/soulslike-survival-trend.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gameguidejp.com/articles/reddit-subreddit-patrol-guide.html</loc>
+    <loc>https://gameguidejp.com/articles/enshrouded-vs-valheim-design-comparison.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gameguidejp.com/articles/wiki-gg-fandom-migration-trend.html</loc>
+    <loc>https://gameguidejp.com/articles/indie-ea-success-patterns.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gameguidejp.com/privacy.html</loc>
+    <loc>https://gameguidejp.com/articles/steam-early-access-checklist.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gameguidejp.com/articles/fextralife-fandom-wiki-guide.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gameguidejp.com/articles/foreign-game-community-guide.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gameguidejp.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://gameguidejp.com/contact.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://gameguidejp.com/about.html</loc>
+    <loc>https://gameguidejp.com/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
